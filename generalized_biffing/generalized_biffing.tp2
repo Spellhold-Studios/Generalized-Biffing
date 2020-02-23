@@ -7,7 +7,7 @@ LANGUAGE ~English~
          ~English~
          ~generalized_biffing/tra/english/setup.tra~
 
-LANGUAGE ~French (By Isaya)~
+LANGUAGE ~French (Traduction : Isaya)~
          ~french~
          ~generalized_biffing/tra/french/setup.tra~
 
@@ -41,8 +41,8 @@ OUTER_TEXT_SPRINT ~char~ ~[^ %TAB%%WNL%]~
 OUTER_TEXT_SPRINT ~8char~ ~%char%%char%?%char%?%char%?%char%?%char%?%char%?%char%?~
 OUTER_TEXT_SPRINT ~9char~ ~%char%%char%%char%%char%%char%%char%%char%%char%%char%%char%*~
 OUTER_TEXT_SPRINT ~ext~ ~\(wav\|tis\|bam\)~
-ACTION_IF selection THEN BEGIN
-	OUTER_TEXT_SPRINT ext ~\(bmp\|mve\|wav\|wac\|plt\|bam\|wed\|chu\|tis\|mos\|itm\|spl\|bcs\|ids\|cre\|are\|dlg\|2da\|gam\|sto\|wmp\|chr\|eff\|vvc\|vef\|pro\)~
+ACTION_IF selection BEGIN
+	OUTER_TEXT_SPRINT ext ~\(bmp\|mve\|wav\|wfx\|plt\|bam\|wed\|chu\|tis\|mos\|itm\|spl\|bcs\|ids\|cre\|are\|dlg\|2da\|gam\|sto\|wmp\|eff\|chr\|vvc\|vef\|pro\|wbm\|fnt\|gui\|sql\|pvrz\|glsl\|ini\)~
 END
 
 OUTER_TEXT_SPRINT ~myRegExp~ ~^%8char%\.%ext%$~
@@ -53,14 +53,14 @@ MKDIR ~generalized_biffing/prod/0/rej~
 OUTER_SET currentTotal = 0
 OUTER_SET currentFile = 0
 ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
-  ACTION_IF %BASH_FOR_SIZE% + currentTotal > 30000000 /* 30M */ && currentTotal > 0 BEGIN
-    MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
-    OUTER_SET currentFile = currentFile + 1
-    OUTER_SET currentTotal = 0
-    MKDIR ~generalized_biffing/prod/0/biffs/%currentFile%~
-  END
-  MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/biffs/%currentFile%/%BASH_FOR_FILE%~
-  OUTER_SET currentTotal += BASH_FOR_SIZE
+	ACTION_IF %BASH_FOR_SIZE% + currentTotal > 30000000 /* 30M */ && currentTotal > 0 BEGIN
+		MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
+		OUTER_SET currentFile = currentFile + 1
+		OUTER_SET currentTotal = 0
+		MKDIR ~generalized_biffing/prod/0/biffs/%currentFile%~
+	END
+	MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/biffs/%currentFile%/%BASH_FOR_FILE%~
+	OUTER_SET currentTotal += BASH_FOR_SIZE
 END
 	
 ACTION_IF currentTotal > 0 BEGIN
@@ -69,10 +69,10 @@ END
 
 OUTER_TEXT_SPRINT ~myRegExp~ ~^%9char%.%ext%$~
 ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
-  OUTER_PATCH_SAVE ~8name~ ~%BASH_FOR_FILE%~ BEGIN
-    DELETE_BYTES 8 (INDEX_BUFFER (EXACT_MATCH ~.~) - 8)
-  END
-  ACTION_IF FILE_EXISTS_IN_GAME ~%8name%~ THEN BEGIN
-    MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/rej/%BASH_FOR_FILE%~
-  END
+	OUTER_PATCH_SAVE ~8name~ ~%BASH_FOR_FILE%~ BEGIN
+		DELETE_BYTES 8 (INDEX_BUFFER (EXACT_MATCH ~.~) - 8)
+	END
+	ACTION_IF FILE_EXISTS_IN_GAME ~%8name%~ THEN BEGIN
+		MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/rej/%BASH_FOR_FILE%~
+	END
 END
