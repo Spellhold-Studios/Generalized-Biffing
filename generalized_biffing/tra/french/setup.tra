@@ -4,6 +4,9 @@
 1] Tous les fichiers (recommande par les createurs du Big World Project)~
 @3 = ~Probleme d'interface chaise/clavier. Veuillez taper 0 ou 1.
 
-Desirez-vous uniquement archiver les fichiers wav, tis et bam, ou tous les fichiers trouves ?
+Desirez-vous archiver uniquement les fichiers wav, tis et bam, ou tous les fichiers trouves ?
 0] Les fichiers wav, tis et bam (recommande par The Bigg et les joueurs de mini-modifications)
 1] Tous les fichiers (recommande par les createurs du Big World Project)~ 
+
+@10 = ~Archiver uniquement les fichiers wav, tis et bam (recommande par The Bigg  et les joueurs de mini-modifications)~
+@11 = ~Archiver tous les fichiers (recommande par les createurs du Big World Project)~

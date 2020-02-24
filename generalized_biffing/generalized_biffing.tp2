@@ -1,7 +1,7 @@
 BACKUP ~generalized_biffing/backup~
 AUTHOR ~the bigg~
 
-VERSION ~v2.2~
+VERSION ~v2.3~
 
 LANGUAGE ~English~
          ~English~
@@ -15,64 +15,24 @@ LANGUAGE ~Italiano~
          ~italian~
          ~generalized_biffing/tra/italian/setup.tra~
 
-BEGIN @1
 
-ACTION_IF ~%WEIDU_OS%~ STRING_COMPARE_CASE ~WIN32~ THEN BEGIN
-	AT_UNINSTALL ~rm -rf generalized_biffing/prod/0~
-END ELSE BEGIN
-	AT_UNINSTALL ~del /q /f generalized_biffing\prod\0~ EXACT
-END
+/* ===================================== *
+ *  Biff only .wav, .tis and .bam files  *
+ * ===================================== */
+BEGIN @10
+DESIGNATED 0 LABEL "generalized_biffing_min"
+SUBCOMPONENT @1
 
-<<<<<<<< .../list-of-files
->>>>>>>>
+OUTER_SET biffing_all = 0
+INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
 
-PRINT @2
 
-ACTION_READLN selection
+/* ================ *
+ *  Biff all files  *
+ * ================ */
+BEGIN @11
+DESIGNATED 1 LABEL "generalized_biffing_all_files"
+SUBCOMPONENT @1
 
-OUTER_WHILE (~%selection%~ STRING_COMPARE 1) && (~%selection%~ STRING_COMPARE 0) BEGIN
-PRINT @3
-
-ACTION_READLN selection
-END
-
-// this defines a one to eight character regular expression for matching resrefs
-OUTER_TEXT_SPRINT ~char~ ~[^ %TAB%%WNL%]~
-OUTER_TEXT_SPRINT ~8char~ ~%char%%char%?%char%?%char%?%char%?%char%?%char%?%char%?~
-OUTER_TEXT_SPRINT ~9char~ ~%char%%char%%char%%char%%char%%char%%char%%char%%char%%char%*~
-OUTER_TEXT_SPRINT ~ext~ ~\(wav\|tis\|bam\)~
-ACTION_IF selection BEGIN
-	OUTER_TEXT_SPRINT ext ~\(bmp\|mve\|wav\|wfx\|plt\|bam\|wed\|chu\|tis\|mos\|itm\|spl\|bcs\|ids\|cre\|are\|dlg\|2da\|gam\|sto\|wmp\|eff\|chr\|vvc\|vef\|pro\|wbm\|fnt\|gui\|sql\|pvrz\|glsl\|ini\)~
-END
-
-OUTER_TEXT_SPRINT ~myRegExp~ ~^%8char%\.%ext%$~
-
-MKDIR ~generalized_biffing/prod/0/biffs/0~
-MKDIR ~generalized_biffing/prod/0/rej~
-
-OUTER_SET currentTotal = 0
-OUTER_SET currentFile = 0
-ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
-	ACTION_IF %BASH_FOR_SIZE% + currentTotal > 30000000 /* 30M */ && currentTotal > 0 BEGIN
-		MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
-		OUTER_SET currentFile = currentFile + 1
-		OUTER_SET currentTotal = 0
-		MKDIR ~generalized_biffing/prod/0/biffs/%currentFile%~
-	END
-	MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/biffs/%currentFile%/%BASH_FOR_FILE%~
-	OUTER_SET currentTotal += BASH_FOR_SIZE
-END
-	
-ACTION_IF currentTotal > 0 BEGIN
-	MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
-END
-
-OUTER_TEXT_SPRINT ~myRegExp~ ~^%9char%.%ext%$~
-ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
-	OUTER_PATCH_SAVE ~8name~ ~%BASH_FOR_FILE%~ BEGIN
-		DELETE_BYTES 8 (INDEX_BUFFER (EXACT_MATCH ~.~) - 8)
-	END
-	ACTION_IF FILE_EXISTS_IN_GAME ~%8name%~ THEN BEGIN
-		MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/rej/%BASH_FOR_FILE%~
-	END
-END
+OUTER_SET biffing_all = 1
+INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~

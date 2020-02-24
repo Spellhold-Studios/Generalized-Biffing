@@ -44,7 +44,7 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 This mod is designed to work on all Infinity Engine games.
 
-Generalized Biffing is a WeiDU mod, and therefore should be compatible with all WeiDU mods. It is . If you encounter any bugs, please <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">report them on the forum</a>!
+Generalized Biffing is a WeiDU mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">report them on the forum</a>!
 
 <div align="right"><a href="#top">Back to top</a></div>
 
@@ -107,7 +107,8 @@ In addition to the methods above for removing individual components, you can com
 
 ## <a name="components" id="components"></a>Components
 
-The installer includes the following components. The number of each is the component *DESIGNATED* number which gives it a fixed install position, lets other components and mods detect it and allows automated installers to specify component choices.<br /><br />
+As of v2.3, the installer splits main component into two sub components, letting the player decide if he wants to biff all files or only .wav, .tis and .bam files.  
+The number of each is the component *DESIGNATED* number which gives it a fixed install position, lets other components and mods detect it and allows automated installers to specify component choices.<br /><br />
 
 
 #### 0. Biff only .wav, .tis and .bam files
@@ -173,15 +174,16 @@ This component is recommended by the "*Big World Dudes*" (practically essential 
 #### Version 2.3 (February 24, 2020)
 
 - Added *generalized_biffing.ini* metadata file to support AL|EN's "Project Infinity".
-- Included BWP Fixpack (<a href="http://www.shsforums.net/topic/56752-the-official-bwp-fixpack-thread/?p=580487">Argent77's BG:EE compatibility patch</a>).
 - Added `DESIGNATED` numbers and "*generalized_biffing_min*" and "*generalized_biffing_all_files*" component `LABELS`.
+- Replaced `READLN` actions with `SUBCOMPONENTS` to support AL|EN's "Project Infinity".
+- Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.
+- Included BWP Fixpack (<a href="http://www.shsforums.net/topic/56752-the-official-bwp-fixpack-thread/?p=580487">Argent77's BG:EE compatibility patch</a>).
 - Added `README` command in tp2.
 - Wrote a new *generalized_biffing-readme-english.html* readme file.
-- This version includes all original patches.
+- Removed useless backup folder.
 - Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.
 - Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Uploaded mod to official SpellHold Studios GitHub mirror account.
-backup
 
 ## 
 
