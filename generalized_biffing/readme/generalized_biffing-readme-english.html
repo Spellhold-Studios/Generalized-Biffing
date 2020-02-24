@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+	body {
+		margin: 0;
+		padding: 0;
+		cursor: default;
+		text-align: center;
+		color: #000;
+		background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+	}
+
+	#wrap {
+		text-align: left;
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 88%;
+		font-family: Verdana, Tahoma, Arial, sans-serif;
+		font-size: 12px;
+		color: #333;
+	}
+
+	#header {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		padding: 5px 0 13px 0;
+	}
+	#header .about {
+		margin: 7px 0 0 0;
+		padding: 0;
+		font-style: italic;
+		color: #555;
+	}
+	#header .menu {
+		font-weight: bold;
+		margin: 0;
+		color: #999;
+	}
+	#header .menu a:link,
+	#header .menu a:visited {
+		color: #333;
+	}
+
+	#footer {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		font-size: 75%;
+		padding: 5px 0 13px 0;
+	}
+
+	#maindiv {
+		margin: 0 auto;
+		margin-top: -20px;
+		width: 80%;
+	}
+
+	#maindiv .content {
+		counter-increment: kman;
+		counter-reset: h2;
+		background-color: #e8e8e6;
+		padding: 0 0 25px 0;
+		margin: 50px auto;
+		border-width: 1px 1px 4px 10px;
+		border-style: solid;
+		border-color: #781808;
+		position: relative;
+		display: block;
+	}
+	#maindiv .content::before {
+		content: counter(kman, lower-roman);
+		font-size: 100%;
+		font-weight: bold;
+		text-align: center;
+		color: #eee;
+		background-color: #781808;
+		width: 35px;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+
+	#maindiv .important {
+		font-size: 95%;
+		font-family: Verdana;
+		text-align: left;
+		background-color: #F1F1F1;
+		border-top: solid 1px #aaa;
+		border-bottom: solid 1px #aaa;
+		border-left: solid 1px #aaa;
+		border-right: solid 1px #aaa;
+		padding: 10px;
+		margin: 20px auto;
+		width: 80%;
+		line-height: 160%;
+	}
+	#maindiv .important::before {
+		display: none;
+	}
+	#maindiv .important p {
+		width: 100%;
+		font-size: 100%;
+		text-indent: 0px;
+		margin: 5px 0 10px 0;
+	}
+	#maindiv .important ol {
+		margin: -10px 0 0 20px;
+	}
+	#maindiv .important ul {
+		margin: -10px 0 0 15px;
+	}
+
+	#maindiv p {
+		font-size: 100%;
+		font-style: normal;
+		line-height: 150%;
+		padding: 0px;
+		margin: 10px auto;
+		width: 90%;
+		display: block;
+	}
+
+	#maindiv address {
+		font-size: 95%;
+		font-style: normal;
+		font-weight: bold;
+		text-decoration: none;
+		color: #BBB;
+		background-color: #781808;
+		padding: 3px 0px 0px;
+		margin: 0px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0px;
+		display: block;
+		text-align: right;
+	}
+	#maindiv address a:active {
+		color: #fff;
+		text-decoration: line-through;
+		border: none;
+	}
+	#maindiv address a:focus,
+	#maindiv address a:hover {
+		text-decoration: none;
+		color: #F1F1F1;
+		border: 0;
+	}
+	#maindiv address a:link,
+	#maindiv address a:visited {
+		font-weight: bold;
+		text-decoration: underline;
+		background-color: transparent;
+		color: #eaeaea !important;
+		padding-right: 5px;
+		padding-left: 6px;
+	}
+
+
+	/*	Lists  */
+	#maindiv ol {
+		line-height: 170%;
+		width: 87%;
+		margin-left: 4%;
+*		margin: -10px 0 0 35px;
+		*margin-left: 70px;
+	}
+	#maindiv ol li {
+		line-height: 150%;
+	}
+	#maindiv ul {
+		line-height: 170%;
+		margin-left: 4%;
+		width: 87%;
+	}
+	#maindiv ul li {
+		line-height: 150%;
+	}
+	#maindiv ul li ul {
+		margin: 0px;
+		width: 96%;
+	}
+	#maindiv ul li ul li {
+	}
+	#maindiv ul li a:link,
+	#maindiv ul li a:visited,
+	#maindiv ul li ul li a:link,
+	#maindiv ul li ul li a:visited {
+		color: #781808;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	.t1 {
+		font-weight: bold;
+		width: 26%;
+		text-align: right;
+		clear: right;
+		float: left;
+		*float: none;
+		*margin-left: 65px;
+		line-height: 22px;
+	}
+	.t2 {
+		text-align: left;
+		width: 73%;
+		float: right;
+		*float: none;
+		line-height: 22px;
+	}
+
+
+	/*	Liens internet  */
+	a:hover,
+	a:active {
+		color: #222;
+		border-bottom: 1px solid black;
+	}
+	a:link,
+	a:visited {
+		color: #781808;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 250%; /* 225 */
+		color: #444;
+		padding: 10px 0 15px 0; /* 5 0 5 0 */
+		margin: 0;
+		width: 100%;
+	}
+	h2 {
+		display: block;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px;
+		margin: 20px 0 0 0;
+		border-bottom: dotted 2px #d0d0d0;
+		border-top: dotted 2px #d0d0d0;
+		background: #deded9;
+		font-size: 160%;
+	}
+	h2::first-letter {
+		color: #781808;
+		background-color: transparent;
+	}
+	h3,
+	h4,
+	h5 {
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+	}
+	h3 {
+		font-size: 125%;
+		font-style: italic;
+	}
+	h4 {
+		font-size: 125%;
+	}
+	h5 {
+		font-size: 100%;
+	}
+	h6 {
+		width: 100%;
+		margin: 10px 0 15px 0;
+		background-color: #ECECEC;
+		text-align: left;
+		text-indent: 30px;
+		font-size: 100%;
+		font-style: italic;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-bottom: solid 1px #bbb;
+		border-top: solid 1px #bbb;
+	}
+
+	.screen {background-size:contain;background-repeat:no-repeat}
+	.screen img{max-width:100%; opacity:1;transition: opacity 1.25s ease-in-out;
+		-moz-transition: opacity 1.25s ease-in-out;
+		-webkit-transition: opacity 1.25s ease-in-out;
+	}
+	.screen img:hover{max-width:100%; opacity:0}
+
+-->
+/*]]>*/
+	</style>
+	<title>
+		Spellhold Studios - Generalized Biffing
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="images/shsweb.ico" rel="icon" type="image/bmp" />
+
+  </head>
+
+  <body>
+	<div id="wrap">
+	  <a name="top" id="top"></a>
+	  <div id="header">
+
+		<h1 style="color: #781808;text-shadow: 0.1rem 0.1rem 0.25rem #807559;">Generalized Biffing</h1>
+
+		<span style="font-style: italic;"><strong>A Spellhold Studios mod for Infinity Engine games</strong></span>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="about">
+			Author: the bigg (Valerio Bigiani)
+		</p>
+		<p class="about">
+			<a href="http://www.shsforums.net/topic/39238-generalized-biffing/">Mod Website and Forum</a> &#8226; <a href="http://www.shsforums.net/files/file/741-generalized-biffing/">Download</a> &#8226; <a href="https://github.com/SpellholdStudios/generalized_biffing/releases/latest">GitHub</a> &#8226; Version 2.3
+		</p>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="menu">
+			<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#compon">Components</a> &#x2B25; <a href="#trouble">Troubleshooting</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#version">Version History</a>
+		</p>
+	  </div>
+
+	<div id="maindiv">
+<!-- ================== I n t r o d u c t i o n ================== -->
+	  <a name="intro" id="intro"></a>
+	  <div class="content">
+
+		<h2>Overview</h2><br>
+
+		<p>
+			This <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod allows you to biff the content of the override folder for improved performance, that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
+		</p>
+
+		<p>
+			<strong>Note:</strong> Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
+		</p><br>
+
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Overview</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ================= C o m p a t i b i l i t y ================= -->
+	  <a name="compat" id="compat"></a>
+	  <div class="content">
+
+		<h2>Compatibility</h2><br>
+
+		<p>
+			Generalized Biffing is designed to work on all Infinity Engine games.
+		</p>
+
+		<p>
+			This mod is a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">report them on the forum</a>!
+		</p><br>
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Compatibility</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ================== I n s t a l l a t i o n ================== -->
+	  <a name="installation" id="installation"></a>
+	  <div class="content">
+
+		<h2>Installation</h2><br>
+
+		<h3>Notes</h3>
+
+		<p style="margin-top:2%;">
+			<em>If you've previously installed the mod, remove it before extracting the new version. To do this, run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing.exe&nbsp;</span></strong>, un-install all previously installed components and delete the generalized_biffing folder.</em>
+		</p>
+		<p>
+			<em>When installing or un-installing, <strong>do not close the <acronym title="Disk Operating System">DOS</acronym> window</strong> by clicking on the <strong>X</strong> button! Instead, press the <strong>Enter</strong> key whenever instructed to do so.</em>
+		</p>
+		<p>
+			<strong>Disable any antivirus</strong> or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.
+		</p>
+		<p>
+			You can extract files from the archive using <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
+		</p><br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Enhanced Editions Note</h3>
+
+		<p style="margin-top:2%;">
+			The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old savegames. Alternatively, copy the whole game's folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+		</p><br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Windows</h3>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify (<em>the folder which contains the "CHITIN.KEY" file</em>). On successful extraction, there should be a generalized_biffing folder and a setup-generalized_biffing.exe file in your game folder. To install, simply double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing.exe&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing.exe&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise change components.
+		</p></br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Mac OS X</h3>
+
+		<p style="margin-top:2%;">
+			Generalized Biffing for Mac OS X distributed in the same compressed archive and includes a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer.
+		</p>
+		<p>
+			First, extract the files from the archive into your game directory. On successful extraction, there should be a generalized_biffing folder, setup-generalized_biffing and setup-generalized_biffing.command files in your game folder. To install, double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing.command&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			You can run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing.command&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise the components settings.
+		</p></br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Linux</h3>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify.
+		</p>
+		<p>
+			Download the latest Linux version of <a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> and copy WeiDU and WeInstall to /usr/bin. Then open a terminal and <strong>cd</strong> to your game installation directory.
+		</p>
+		<p>
+			<em>Optional: run 'tolower' and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either, if you've extracted only this mod since the last time you lowercased file names. If unsure, running tolower and choosing both options is the safe bet.</em>
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;WeInstall setup-generalized_biffing&nbsp;</span></strong> in your game folder to install the mod. Then run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;wine BGMain.exe&nbsp;</span></strong> and start playing.
+		</p><br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Note for Complete Un-installation</h3>
+
+		<p style="margin-top:2%;">
+			In addition to the methods above for removing individual components, you can completely un-install the mod using <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-generalized_biffing --uninstall&nbsp;</span></strong> at the command line to remove all components without wading through prompts.
+		</p><br>
+
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Installation</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- =================== C o m p o n e n t s ==================== -->
+	  <a name="compon" id="compon"></a>
+		<div class="content">
+
+		<h2>Components</h2><br>
+
+		<p>As of v2.3, the installer splits main component into two sub components, letting the player decide if he wants to biff all files or only .wav, .tis and .bam files.</p>
+		<p>The number of each is the component <em>DESIGNATED</em> number which gives it a fixed install position, lets other components and mods detect it and allows automated installers to specify component choices.</p><br>
+
+		<p><strong>0. Biff only .wav, .tis and .bam files.</strong><br />
+		</p>
+		<p>
+			This component might be enough for installations with few mods (recommended by The Bigg and other "<em>Small World Dudes</em>").
+		</p><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><strong>1. Biff all files.</strong><br />
+		</p>
+		<p>
+			This component is recommended by the "<em>Big World Dudes</em>" (practically essential for installations with many mods).
+		</p><br>
+
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Components</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ============== T r o u b l e s h o o t i n g =============== -->
+	  <a name="trouble" id="trouble"></a>
+	  <div class="content">
+
+          <h2>Troubleshooting</h2><br>
+
+		<p>
+			These are some general tips if you have problems getting the game working, with or without this or other mods. Many times, errors have to do with the game engine itself or the manner of installation or gameplay. The game recommends deleting all files out of the /cache, /temp and /tempsave sub-folders in your game folder to see if that resolves the problem before any further troubleshooting.
+		</p><br>
+
+		<p>
+			<strong>Symptom: Game freezes or crashes to desktop (CTDs)</strong>
+		</p>
+		<p>
+			Sometimes the game displays an "assertion error" in a pop-up window when this happens, but often times it doesn't. To enable the full error message, open the file <strong>baldur.ini</strong> in your me folder with a text editor (such as Notepad). If you find you can't edit it or save changes in Windows Vista or 7, see <a href="http://forums.bioware.com/viewtopic.html?topic=662080&forum=10"> this topic</a> for assistance.
+		</p>
+		<p>
+			Under the [Program Options] section in the file, type <strong> Logging On=1</strong> (unless it's already there). While you're there, you may also want to make sure <strong>Debug Mode=1</strong> is there to enable the <a href="http://iesdp.gibberlings3.net/clua/bg2.htm">CLUA Console</a> for debugging and testing. Save the file and exit. Now go back into the game and try to reproduce the crash. Then look in your game folder again for the <strong>Baldur.err</strong> file and open it with a text editor to analyse its contents.
+		</p><br>
+
+		<p>
+			<strong>Symptom: Game crashes with no Baldur.err log and shows either a black screen or a pop-up window indicating an error at offset 005ca8a8</strong>
+		</p>
+		<p>
+			This usually indicates an animation-related issue. Make sure you have the latest version of the mod. If you've installed other mods after it and have this issue, install the fix available <a href="http://www.shsforums.net/index.php?app=downloads&showfile=884">here</a>.
+		</p><br>
+
+		<p>
+			<strong>Symptom:</strong>
+		</p>
+		<div class="important" style="background-color: black;color: #deded9;">
+			<p style="font-family: Courier New;font-size: 100%;">
+				<strong>ERROR: error copying [infinityanimations/content/somefile.bam]<br />
+				ERROR: [SOMEFILE.CRE] -> [override/SOMEFILE.CRE] Patching failed (COPY)<br />
+				Stopping installation because of error.</strong> (with no other error message)<br />
+			</p>
+		</div>
+		<p>
+			Less-than-informative messages like these may indicate you're installing to a hard drive with a low data transfer rate or an antivirus program is active during installation (which can also affect data transfer). Try installing to an internal drive with antivirus protection disabled during the install. If unsure, disconnect from the Internet (either unplug your network cable or disable your wireless adaptor) and turn off <strong>all</strong> memory-resident programs during the install. To get a list of these, go to Start > Run and type <strong>msconfig</strong> where it says "Open:" then click OK. When the System Configuration Utility appears, click on the Startup tab. The only really necessary programs that need to be loaded in memory at startup are those related to your graphics chip (typically ATI or NVIDIA). Uncheck everything else, reboot and try installing the mod again. There are well-documented issues with installing mods while Avast antivirus is running, so make absolutely sure all components of Avast are completely disabled.
+		</p><br>
+
+		<p>
+			<strong>Other issues</strong>
+		</p>
+		<p>
+			If you have more than one large mod installed, please refer to the <a href="http://www.shsforums.net/index.php?showtopic=41036">Megamod FAQ</a> for more troubleshooting tips.
+		</p><br>
+		<p>
+			If none of this resolves your issue, or you have mod-specific issues, please report the problem in the mod's <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">forum</a>. Include the contents of your <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.log file in the post, or attach it if it's large.
+		</p><br>
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Troubleshooting</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ======================= C r e d i t s ====================== -->
+	  <a name="credits" id="credits"></a>
+	  <div class="content">
+
+		<h2>Credits</h2><br>
+
+			<span class="t1">Author:</span> <span class="t2"><a href="http://www.shsforums.net/user/2083-the bigg/">the bigg</a></span><br />
+			<span class="t1">Support:</span> <span class="t2"><a href="http://www.shsforums.net/topic/39238-generalized-biffing/">SHS Staff</a></span><br />
+
+		<hr style="clear: both; width: 90%; color: transparent; background-color: transparent; " /><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<h5>Special Acknowledgements to:</h5>
+
+ 		  <ul class="version-list c1">
+			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
+			<li>French translation: Isaya.</li>
+			<li>Argent77: BG:EE compatibility patch.</li>
+			<li>Everyone else from <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, and the other Infinity Engine gaming and modding communities who offered their help and support.</li>
+		  </ul><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<h5>Programs/tools used in creation:</h5>
+
+		  <ul class="version-list c1">
+			<li>
+			  <a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a>, by Wes Weimer, the bigg and Wisp.
+			</li>
+			<li>
+			  <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a>, maintained by igi and lynx.
+ 			</li>
+
+			<li>
+			  <a href="http://notepad-plus-plus.org/">Notepad++</a>, by the Notepad++ team, Don Ho, and the spellcheck plug-in.
+ 			</li>
+			<li>
+			  <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a>, by Argent77.
+			</li>
+		  </ul><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<h5>Copyrights</h5>
+
+		  <div class="important" style="border-color: #781808;">
+			<p>Generalized Biffing is not developed, supported, or endorsed by BioWare&trade; or Interplay/BlackIsle, Overhaul, Beamdog or the Wizards of the Coast. It was developed by The Bigg.</p>
+			<p>All mod content is &copy;The Bigg.</p>
+			<p>Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc. The BioWare Infinity Engine is &copy; BioWare Corp. All other trademarks and copyrights are property of their respective owners.</p>
+<br>
+			<p>This mod was created to be freely enjoyed by all Baldur's Gate II players, and its content is free of rights. However, it should not be sold, published, compiled or redistributed in any form without the consent of the author.</p>
+			<p>Please note that any and all redistribution and/or hosting of this mod is prohibited without permission from the author.</p>
+		  </div><br>
+
+		<p>
+			The modding community for the Infinity Engine has been going strong for more than 10 years now, and is the culmination of thousands of unpaid modding hours by fellow fans of the game. Modders produce their best work and players get the best, well-supported mods when we all work together.
+		</p>
+		<p>
+			There are two big ways to upset this harmony. One is to claim someone else's work as your own. The second is to host and redistribute a mod without permission from the author(s).
+		</p>
+		<p>
+			Be kind to your fellow players and modders. Don't do either.
+		</p><br>
+
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Credits</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ============== V e r s i o n   H i s t o r y =============== -->
+	  <a name="version" id="version"></a>
+	  <div class="content">
+
+		<h2>Version History</h2><br>
+
+		<h6>Version 2.3 (February 24, 2020)</h6>
+
+		  <ul>
+			<li>Added <em>generalized_biffing.ini</em> metadata file to support AL|EN's "Project Infinity".</li>
+			<li>Added <em>DESIGNATED</em> numbers and "<em>generalized_biffing_min</em>" and "<em>generalized_biffing_all_files</em>" component LABELS.</li>
+			<li>Replaced <em>READLN</em> actions with <em>SUBCOMPONENTS</em> to support AL|EN's "Project Infinity".</li>
+			<li>Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.</li>
+			<li>Integrated BWP Fixpack (<a href="http://www.shsforums.net/topic/56752-the-official-bwp-fixpack-thread/?p=580487">Argent77's BG:EE compatibility patch</a>).</li>
+			<li>Added <em>README</em> command in tp2.</li>
+			<li>Wrote a new <em>generalized_biffing-readme-english.html</em> readme file.</li>
+			<li>Removed useless backup folder.</li>
+			<li>Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.</li>
+			<li>Included Linux and Mac Os X versions in the same package (thanks AL|EN!).</li>
+			<li>Uploaded mod to official SpellHold Studios GitHub mirror account.</li>
+		  </ul><br>
+
+		<h6>Version 2.2 (April 13, 2018)</h6>
+
+		  <ul>
+			<li>Used a better algorithm for listing and moving files.</li>
+		  </ul><br>
+
+		<h6>Version 2.1 (January 4, 2011)</h6>
+
+		  <ul>
+			<li>Unknown modifications.</li>
+		  </ul><br>
+
+		<h6>Version 2.0 (November 30, 2010)</h6>
+
+		  <ul>
+			<li>Added French translation (thanks Isaya).</li>
+		  </ul><br>
+
+		<h6>Version ?.? (November 13, 2010)</h6>
+
+		  <ul>
+			<li>Files whose names don't fit in 8.3 characters aren't biffed.</li>
+		  </ul><br>
+
+		<h6>Versions ?.? (July 23, 2010 - January 8, 2010)</h6>
+
+		  <ul>
+			<li>Unknown modifications.</li>
+		  </ul><br>
+
+		<h6>Version ?.? (September 16, 2009)</h6>
+
+		  <ul>
+			<li>Only for Linux users.</li>
+		  </ul><br>
+
+		<h6>Version ?.? (August 3, 2009)</h6>
+
+		  <ul>
+			<li>Unknown modifications.</li>
+		  </ul><br>
+
+		<h6>Version ??? (April 6, 2009)</h6>
+
+		  <ul>
+			<li>Tightened regexp to ensure only valid files will be biffed anyhow.</li>
+		  </ul><br>
+
+		<h6>Version 1.0</h6>
+
+		  <ul>
+			<li>Initial release.</li>
+		  </ul><br>
+
+		<address>
+			<span class="footer">Generalized Biffing &gt; Version History</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+	</div>
+  </body>
+</html>
