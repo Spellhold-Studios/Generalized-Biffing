@@ -5,7 +5,7 @@
 
 /* --------------------------------------------------------- *
  *  biffing_all = 0 ==> Biff only .wav, .tis and .bam files  *
- *  biffing_all = 0 ==> Biff all files                       *
+ *  biffing_all = 1 ==> Biff all files                       *
  * --------------------------------------------------------- */
 
 ACTION_IF ~%WEIDU_OS%~ STRING_COMPARE_CASE ~WIN32~ THEN BEGIN
