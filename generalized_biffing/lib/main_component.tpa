@@ -25,7 +25,7 @@ OUTER_TEXT_SPRINT ~9char~ ~%char%%char%%char%%char%%char%%char%%char%%char%%char
 OUTER_TEXT_SPRINT ~ext~ ~\(wav\|tis\|bam\)~
 ACTION_IF biffing_all BEGIN
   ACTION_IF ENGINE_IS ~bgee bg2ee iwdee pstee~ BEGIN
-    OUTER_TEXT_SPRINT ee_types ~\|fnt\|glsl\|gui\|lua\|maze\|menu\|png\|pvrz\|sql\|ttf\|wbm~
+    OUTER_TEXT_SPRINT ee_types ~\|fnt\|glsl\|gui\|lua\|menu\|png\|pvrz\|sql\|ttf\|wbm~
   END ELSE BEGIN
     OUTER_TEXT_SPRINT ee_types ~~
   END
