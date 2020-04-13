@@ -169,6 +169,14 @@ This component is recommended by the "*Big World Dudes*" (practically essential 
 
 ## <a name="versions" id="versions"></a>Version History
 
+#### Version 2.4 (April 13, 2020)
+
+- Added missing EE-specific resource types: LUA, MENU, PNG and TTF.
+- EE-specific resource types are only considered for EE games.
+- Sorted resource type list alphabetically.
+
+## 
+
 #### Version 2.3 (February 24, 2020)
 
 - Added *generalized_biffing.ini* metadata file to support AL|EN's "Project Infinity".
@@ -181,7 +189,7 @@ This component is recommended by the "*Big World Dudes*" (practically essential 
 - Removed useless backup folder.
 - Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.
 - Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
-- Uploaded mod to official SpellHold Studios GitHub mirror account.
+- Uploaded mod to official Spellhold Studios GitHub mirror account.
 
 ## 
 
