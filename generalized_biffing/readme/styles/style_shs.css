@@ -1,0 +1,560 @@
+
+body {
+	cursor: default;
+	text-align: center;
+	counter-reset:kman;
+	color: #000;
+	margin-top: 20px;
+	margin-bottom: -20px;
+	background: #e3e3db url('../images/shsbkgd.jpg');
+}
+/*1pp	body {
+		margin: 0;
+		padding: 0;
+	}*/
+
+
+/* -------------------- *
+ *  En-tête  -  Header  *
+ * -------------------- */
+#wrap {
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 88%;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+#header {
+	text-align: center;
+	background: #e5e5e5;
+	border: 1px solid #781808;
+	border-top: 5px solid #781808;
+	border-bottom: 5px solid #781808;
+	padding: 5px 0 13px 0;
+}
+#header .about {
+	margin: 7px 0 0 0;
+	padding: 0;
+	font-style: italic;
+	color: #555;
+}
+#header .menu {
+	font-weight: bold;
+	margin: 0;
+	color: #999;
+}
+#header .menu a:link,
+#header .menu a:visited {
+	color: #333;
+}
+
+
+/* ---------- *
+ *  Sections  *
+ * ---------- */
+#footer {
+	text-align: center;
+	background: #e5e5e5;
+	border: 1px solid #781808;
+	border-top: 5px solid #781808;
+	border-bottom: 5px solid #781808;
+	font-size: 75%;
+	padding: 5px 0 13px 0;
+}
+
+#maindiv {
+	margin: 0 auto;
+	margin-top: -20px;
+/*	width: 80%;*/
+}
+
+#maindiv .content {
+	counter-increment: kman;
+	counter-reset: h2;
+	background-color: #e8e8e6;
+	padding: 0 0 25px 0;
+	margin: 50px auto;
+	border-width: 1px 1px 4px 10px;
+	border-style: solid;
+	border-color: #781808;
+	width: 90%;
+	position: relative;
+	display: block;
+border-radius: 4px 4px 4px 5px;
+	box-shadow: 6px 6px 9px rgba(0,0,0,.3);
+}
+#maindiv .content::before {
+	content: counter(kman, lower-roman);
+	font-size: 100%;
+	font-weight: bold;
+	text-align: center;
+	color: #eee;
+	background-color: #781808;
+	width: 35px;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+/*1pp
+	width: 50px;
+}*/
+
+#maindiv .important {
+	font-size: 95%;
+	fon-family: Verdana;
+	text-align: left;
+	background-color: #F1F1F1;
+	border-top: solid 1px #aaa;
+	border-bottom: solid 1px #aaa;
+	border-left: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+	padding: 10px;
+	margin: 20px auto;
+	width: 80%;
+	line-height: 160%;
+}
+#maindiv .important::before {
+	display: none;
+}
+#maindiv .important p {
+	font-size: 100%;
+	text-indent: 0px;
+	margin: 5px 0 10px 0;
+		width: 100%;
+}
+#maindiv .important ol {
+	margin: -10px 0 0 20px;
+}
+#maindiv .important ul {
+	margin: -10px 0 0 15px;
+}
+
+#maindiv .important {
+	background-color: #deded9;
+	border-width: 1px 4px 1px 4px;
+	border-style: solid;
+	border-color: #781808;
+}
+#maindiv .important p {
+	margin: 5px 0 5px 0;
+	line-height: 180%;
+}
+
+#maindiv .important ol {
+	margin: -10px 0 0 20px;
+}
+#maindiv .important ul {
+	margin: -10px 0 0 15px;
+}
+
+#maindiv .important_tuto {
+	font-size: 100%;
+	font-family: Verdana;
+	text-align: left;
+	background-color: #F1F1F1;
+	border-top: solid 1px #aaa;
+	border-bottom: solid 1px #aaa;
+	border-left: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+	padding: 10px;
+	margin: 20px auto;
+	width: 80%;
+	line-height: 160%;
+}
+
+.tocplus{
+	counter-increment:hman;
+}
+.toc::before {
+	content: counter(hman, lower-roman) '.';
+	counter-increment:hman;
+	font-size: 100%;
+	color: #781808;
+	font-style:italic;
+	position:absolute
+}
+
+#maindiv address {
+	font-size: 95%;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #BBB;
+	background-color: #781808;
+	padding: 3px 0px 0px;
+	margin: 0px;
+	width: 100%;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	display: block;
+	text-align: right;
+}
+
+
+/* ---------------------------- *
+ *  Corps du texte - Body text  *
+ * ---------------------------- */
+#maindiv p {
+	font-size: 100%;
+	font-style: normal;
+	line-height: 150%;
+	padding: 0px;
+	margin: 10px auto;
+	width: 90%;
+	display: block;
+}
+#maindiv p {
+	text-align: justify;
+	line-height: 150%;
+}
+
+#maindiv p.boxed {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #781808;
+	margin-top: 32px;
+	padding: 6px;
+}
+
+
+/* ---------------- *
+ *  Listes - Lists  *
+ * ---------------- */
+#maindiv ul {
+	line-height: 170%;
+	margin-left: 4%;
+	width: 87%;
+}
+#maindiv ul li {
+	line-height: 150%;
+}
+/*#maindiv ul li {
+	margin-right: 0px;
+}*/
+
+#maindiv ul li ul {
+	margin: 0px;
+	width: 96%;
+}
+/*1pp	#maindiv ul li ul li {}
+	#maindiv ul li ul li ul {
+		margin-left: -1%;
+		width: 98%;
+	}
+	#maindiv ul li ul li ul li {}
+	ul.c1 {margin-left: 32px;}*/
+
+/* UNUSED 1pp = liste numérique
+#maindiv ol {
+	margin: 0px 0 0 35px;
+	*margin-left: 70px;
+}
+#maindiv ol li {
+	line-height: 170%;
+}
+*/
+#maindiv ol {
+	margin: -10px 0 0 35px;
+	*margin-left: 70px;
+}
+#maindiv ol li {
+	line-height: 150%;
+}
+
+	#maindiv ul li a:link,
+	#maindiv ul li a:visited,
+	#maindiv ul li ul li a:link,
+	#maindiv ul li ul li a:visited {
+		color: #781808;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+
+/* --------------------- *
+ *  Titres des versions  *
+ * --------------------- */
+#maindiv .version {
+	display: block;
+	width: 90%;
+	background-color: transparent;
+	text-align: left;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-bottom: solid 1px #781808;
+	border-top: solid 1px #781808;
+}
+
+
+/* ------------------------ *
+ *  Liens internet (links)  *
+ * ------------------------ */
+a:hover,
+a:active {
+	color: #222;
+	border-bottom: 1px solid black;
+}
+
+a:link,
+a:visited {
+	color: #781808;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*a:link,
+a:visited {
+	color: #FFCC33;
+	text-decoration: none;
+}
+a:focus,
+a:hover {
+	text-decoration: underline;
+	*color: #deded9;
+}*/
+
+
+#maindiv address a:active {
+	color: #fff;
+	text-decoration: line-through;
+	border: none;
+}
+#maindiv address a:link,
+#maindiv address a:visited {
+	font-weight: bold;
+	text-decoration: underline;
+	background-color: transparent;
+	color: #eaeaea !important;
+	padding-right: 5px;
+	padding-left: 6px;
+}
+/*#maindiv address a:focus, #maindiv address a:hover {
+	text-decoration: none;
+	color: #000;
+}*/
+#maindiv address a:focus,
+#maindiv address a:hover {
+	text-decoration: none;
+	color: #F1F1F1;
+	border: 0;
+}
+
+
+/* --------------------------------------- *
+ *  Titres des sections (Sections Titles)  *
+ * --------------------------------------- */
+/*h1 {
+	line-height: 170%;
+	font-size: 225%;
+	color: #FFCC33;*/
+	/*5F5F5F
+	padding: 5px 0 5px 0;*/
+/*	margin: 0;
+	width: 100%;
+}*/
+h1 {
+	font-size: 250%; /* 225 */
+		color: #444;
+		padding: 10px 0 15px 0; /* 5 0 5 0 */
+		margin: 0;
+		width: 100%;
+}
+
+/*  Titres de section (160 %)  */
+/*h2 {
+	line-height: 170%;
+}*/
+h2 {
+	display: block;
+	font-family: Verdana, Trebuchet MS, Arial, serif;
+	text-align: left;
+	text-indent: 30px;
+	padding: 0px;
+	margin: 20px 0 0 0;
+	border-bottom: dotted 2px #d0d0d0;
+	border-top: dotted 2px #d0d0d0;
+	background: #deded9;
+	font-size: 160%;
+}
+h2::first-letter {
+	color: #781808;
+	background-color: transparent;
+}
+
+h2 .com {
+	color: #781808;
+	background-color: transparent;
+	margin-left:40px;
+	margin-right:30px;
+}
+
+/*h3, h4, h5, h6 {
+	line-height: 170%;
+	margin: 10px auto;
+	width: 90%;
+	padding: 0;
+}*/
+h3,
+h4,
+h5 {
+	margin: 10px 40px 10px 40px;
+	padding: 0;
+}
+
+/*h3 {
+	font-size: 140%;
+}*/
+h3 {
+	font-size: 125%;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 125%;
+}
+
+h5 {
+	font-size: 100%;
+}
+/*	h5 {
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+		font-size: 100%;
+	}*/
+/*h5 {
+	font-size: 110%;
+}*/
+
+h6 {
+	width: 100%;
+	margin: 10px 0 15px 0;
+	background-color: #ECECEC;
+	text-align: left;
+	text-indent: 30px;
+	font-size: 100%;
+	font-style: italic;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-bottom: solid 1px #bbb;
+	border-top: solid 1px #bbb;
+}
+/*h6 {
+	font-size: 125%;
+}*/
+
+.com {
+	color: #781808;
+	background-color: transparent;
+	margin-right:30px;
+	}
+
+
+/* ------------------ *
+ *  Additional stuff  *
+ * ------------------ */
+.t1 {
+	font-weight: bold;
+	width: 26%;
+	text-align: right;
+	clear: right;
+	float: left;
+	line-height: 22px;
+}
+
+.t2 {
+	text-align: left;
+	width: 73%;
+	float: right;
+	line-height: 22px;
+}
+
+/*1pp	.t1 {
+		font-weight: bold;
+		width: 26%;
+		text-align: right;
+		clear: right;
+		float: left;
+		*float: none;
+		*margin-left: 65px;
+		line-height: 22px;
+	}
+	.t2 {
+		text-align: left;
+		width: 73%;
+		float: right;
+		*float: none;
+		line-height: 22px;
+	}*/
+
+
+/* ----------------------------------------------- *
+ *  Format de code WeiDU - WeiDU coding formating  *
+ * ----------------------------------------------- */
+.weidu {
+	font-family: Courier New;
+	font-size: 100%;
+	border: 1px solid black;
+	background-color: black;
+	color: #deded9;
+}
+
+.tp2 {
+	font-family: Courier New;
+	font-size: 100%;
+}
+
+
+/* --------------------- *
+ * Image-logo d'en-tête  *
+ * --------------------- */
+
+
+/* ---------------------------------- *
+ *  Captures d'écran  -  Screenshots  *
+ * ---------------------------------- */
+/*.screen img:hover{border-style:none;max-width:100%; opacity:0}*/
+
+.screen {text-align:center;background-size:contain;background-repeat:no-repeat;}
+.screen img{max-width:100%; opacity:1;transition: opacity 1.25s ease-in-out;
+	-moz-transition: opacity 1.25s ease-in-out;
+	-webkit-transition: opacity 1.25s ease-in-out;
+	display: inline-block;}
+.screen img:hover{max-width:100%; opacity:0}
+
+
+/*  ------------------------ *
+ *  Ligne rouge  - Red line  *
+ * ------------------------- */
+hr {
+/*	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 90%;
+	height: 1px;
+	border: 0;*/
+	color: #781808;
+	background-color: #781808;
+}
+
+
+/* ------------------- *
+ *  Tableaux - Tables  *
+ * ------------------- */
+/*table {
+	width: 90%;
+	padding: 10px;*/
+/*	border-collapse: collapse;*/
+	/*margin-left: 70px;*/
+	/*padding: 20px 25px;*/
+	/*position: relative;*/
+/*}
+td, th {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid #aaa;
+}*/
