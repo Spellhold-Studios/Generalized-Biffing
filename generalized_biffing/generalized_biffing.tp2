@@ -19,6 +19,10 @@ LANGUAGE ~Italiano~
          ~italian~
          ~generalized_biffing/tra/italian/setup.tra~
 
+LANGUAGE ~Brazilian Portuguese (translation by Felipe)~
+         ~portuguese~
+         ~generalized_biffing/tra/portuguese/setup.tra~
+
 
 /* ===================================== *
  *  Biff only .wav, .tis and .bam files  *
