@@ -61,7 +61,7 @@ This mod is designed to work on all Infinity Engine games.
 
 #### Other Mods Compatibility
 
-Generalized Biffing is a WeiDU mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v24/">report them on the forum</a>!
+Generalized Biffing is a WeiDU mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v25/">report them on the forum</a>!
 
 ## 
 
@@ -153,7 +153,7 @@ The number of each is the component *`DESIGNATED`* number which gives it a fixed
 
 ## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
-&#9755; For support or questions, please visit the <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v24/">mod forum</a>.
+&#9755; For support or questions, please visit the <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v25/">mod forum</a>.
 
 ## 
 
@@ -203,7 +203,7 @@ The number of each is the component *`DESIGNATED`* number which gives it a fixed
 
 #### Version 2.5 &nbsp;(January 30, 2021)
 
-- Added Dynamic Install Syntax in ruad.ini metadata file to support AL|EN's "Project Infinity".
+- Added Dynamic Install Syntax in *generalized_biffing.ini* metadata file to support AL|EN's "Project Infinity".
 - Added Brazilian-Portuguese translation (thanks Felipe).
 - Re-format *generalized_biffing-readme-english.html* with new SHS readme template.
 
