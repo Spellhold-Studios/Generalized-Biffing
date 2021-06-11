@@ -1,7 +1,9 @@
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/generalized_biffing?color=gold)
-![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20Mac%20%7C%20linux&color=informational)
+![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Italian%20%7C%20Brazilian-Portuguese&color=limegreen)
+
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=All%20IE%20%and%20EE%20games&color=dodgerblue)
 
 
 <div align="center"><h1>Generalized Biffing</h1>
@@ -15,7 +17,9 @@
 **Mod Website and Forum:** <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">Generalized Biffing</a>  
 
 
-[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/generalized_biffing?style=plastic)](https://badges.pufler.dev)
+## 
+
+[[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/generalized_biffing?style=plastic)](https://badges.pufler.dev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/SpellholdStudios/generalized_biffing?style=plastic)
 [![Visits Badge](https://badges.pufler.dev/visits/SpellholdStudios/generalized_biffing?color=cyan&style=plastic)](https://badges.pufler.dev) 
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
@@ -26,9 +30,9 @@
 
 ## 
 
-[Read the mod's readme](https://spellholdstudios.github.io/readmes/generalized_biffing-readme-english.html)
+:page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/generalized_biffing-readme-english.html)
 
-[Download the mod at Spellhold Studios](http://www.shsforums.net/files/file/741-generalized-biffing/)<br>
+:inbox_tray: [Download the mod at Spellhold Studios](http://www.shsforums.net/files/file/741-generalized-biffing/)<br>
 
 ## 
 
@@ -97,9 +101,9 @@ Run **`setup-generalized_biffing.exe`** in your game folder to reinstall, un-ins
 
 ## 
 
-#### Mac OS X
+#### macOS
 
-Generalized Biffing for Mac OS X is distributed is distributed in the same compressed archive and includes a WeiDU installer.
+Generalized Biffing for macOS is distributed is distributed in the same compressed archive and includes a WeiDU installer.
 
 First, extract the files from the archive into your game directory. On successful extraction, there should be a :file_folder: generalized_biffing folder, setup-generalized_biffing and setup-generalized_biffing.command files in your game folder. To install, simply double-click **`setup-generalized_biffing.command`** and follow the instructions on screen.
 
@@ -113,9 +117,9 @@ Generalized Biffing for Linux is distributed in the same archive and does not in
 
 Extract the contents of the mod to the folder of the game you wish to modify.
 
-Download the latest version of WeiDU for Linux from <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU.org</a> and copy WeiDU and WeInstall to `/usr/bin`. Following that, open a terminal, **`cd`** to your game installation directory, run tolower and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either if you've extracted only this mod since the last time you lowercased file names. If you're unsure, running tolower and choosing both options is the safe bet.
+Download the latest version of WeiDU for Linux from <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU.org</a> and copy weidU and weinstall to `/usr/bin`. Following that, open a terminal, **`cd`** to your game installation directory, run tolower and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either if you've extracted only this mod since the last time you lowercased file names. If you're unsure, running tolower and choosing both options is the safe bet.
 
-To install, run **`WeInstall setup-generalized_biffing`** in your game folder. Then run **`wine BGMain.exe`** (or **`wine baldur.exe`** for EE games) and start playing.
+To install, run **`weinstall setup-generalized_biffing`** in your game folder. Then run **`wine BGMain.exe`** (or **`wine baldur.exe`** for EE games) and start playing.
 
 ## 
 
