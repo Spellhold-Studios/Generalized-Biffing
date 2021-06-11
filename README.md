@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Italian%20%7C%20Brazilian-Portuguese&color=limegreen)
 
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=All%20IE%20%and%20EE%20games&color=dodgerblue)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=All%20IE%20and%20EE%20games&color=dodgerblue)
 
 
 <div align="center"><h1>Generalized Biffing</h1>
