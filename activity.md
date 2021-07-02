@@ -1,7 +1,8 @@
 <div align="center"><h1>Generalized Biffing</h1>
 </div>
 
-![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=gold)
+
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=darkred)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/generalized_biffing?color=gold)
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
 
@@ -10,8 +11,8 @@
 #### Repository
 [![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/generalized_biffing?style=plastic)](https://badges.pufler.dev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/SpellholdStudios/generalized_biffing?style=plastic)
-[![Updated Badge](https://badges.pufler.dev/updated/SpellholdStudios/generalized_biffing?style=plastic)](https://badges.pufler.dev)
 [![Visits Badge](https://badges.pufler.dev/visits/SpellholdStudios/generalized_biffing?color=cyan&style=plastic)](https://badges.pufler.dev)
+
 ![GitHub release (latest by date)](https://img.shields.io/github/downloads/SpellholdStudios/generalized_biffing/latest/total?color=gold&style=plastic)
 ![GitHub all releases](https://img.shields.io/github/downloads/SpellholdStudios/generalized_biffing/total?label=out%20of&color=yellow&style=plastic)
 
