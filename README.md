@@ -101,9 +101,9 @@ Run **`setup-generalized_biffing.exe`** in your game folder to reinstall, un-ins
 
 ## 
 
-#### macOS
+#### Mac OS
 
-Generalized Biffing for macOS is distributed is distributed in the same compressed archive and includes a WeiDU installer.
+Generalized Biffing for Mac OS is distributed is distributed in the same compressed archive and includes a WeiDU installer.
 
 First, extract the files from the archive into your game directory. On successful extraction, there should be a :file_folder: generalized_biffing folder, setup-generalized_biffing and setup-generalized_biffing.command files in your game folder. To install, simply double-click **`setup-generalized_biffing.command`** and follow the instructions on screen.
 
