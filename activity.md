@@ -2,7 +2,7 @@
 </div>
 
 
-![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=gold)
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=darkred)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/generalized_biffing?color=gold)
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
 
