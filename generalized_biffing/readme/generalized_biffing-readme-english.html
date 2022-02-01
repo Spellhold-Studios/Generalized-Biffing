@@ -56,11 +56,6 @@
 		<p>
 			<strong>Note:</strong> Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
 		</p><br>
-
-		<p>
-			&#9888;&#65039; <strong>Warning: Waiting for next WeiDU update, please install this mod with <a href="https://github.com/WeiDUorg/weidu/releases/tag/v246.00">WeiDU v.246</a>.</strong>
-		</p><br>
-
 		<address>
 			<span class="footer">Generalized Biffing &gt; Overview</span> &#8226;<a href="#top">BACK TO TOP</a>
 		</address>
@@ -212,7 +207,8 @@
 		<h2>Components</h2><br>
 
 		<p>As of v2.3, the installer splits main component into two sub components, letting the player decide if he wants to biff all files or only .wav, .tis and .bam files.</p>
-		<p>The number of each is the component <span class="tp2">DESIGNATED</span> number which gives it a fixed install position, lets other components and mods detect it and allows automated installers to specify component choices.</p><br>
+		<p>The LABEL of each component gives a fixed component ID, regardles of DESIGNATED changes. Other mods should use labels to detect component installation.</p>
+        <br>
 
 		<hr style="width: 90%"><br>
 
@@ -367,6 +363,14 @@
 	  <div class="content" id="versionHistory">
 
 		<h2>Version History</h2><br>
+		
+        <h6>Version 2.6 &nbsp;(February 1, 2022)</h6>
+
+		  <ul>
+			<li>Added ini settings to enable globally unique labels for PI.</li>
+			<li>Remove outdated information from readme.</li>
+            <li>Cosmetic corrections.</li>
+		  </ul><br>
 
 		<h6>Version 2.5 &nbsp;(January 30, 2021)</h6>
 
