@@ -25,11 +25,6 @@
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
 ![GitHub contributors](https://img.shields.io/github/contributors/SpellholdStudios/generalized_biffing?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/SpellholdStudios/generalized_biffing?size=30&padding=5&bots=true)](https://badges.pufler.dev)
 ## 
-
-:warning: Waiting for next WeiDU update, **please install this mod with <a href="https://github.com/WeiDUorg/weidu/releases/tag/v246.00">WeiDU v.246</a>.**
-
-## 
-
 :page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/generalized_biffing-readme-english.html)
 
 :inbox_tray: [Download the mod at Spellhold Studios](http://www.shsforums.net/files/file/741-generalized-biffing/)<br>
