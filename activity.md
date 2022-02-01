@@ -1,6 +1,4 @@
-<div align="center"><h1>Generalized Biffing</h1>
-</div>
-
+<div align="center"><h1>Generalized Biffing</h1></div>
 
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/generalized_biffing?include_prereleases&color=darkred)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/generalized_biffing?color=gold)
