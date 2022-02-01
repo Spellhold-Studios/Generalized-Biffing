@@ -135,7 +135,7 @@ In addition to the methods above for removing individual components, you can com
 ## <a name="components" id="components"></a>Components
 
 As of v2.3, the installer splits main component into two sub components, letting the player decide if he wants to biff all files or only .wav, .tis and .bam files.  
-The number of each is the component *`DESIGNATED`* number which gives it a fixed install position, lets other components and mods detect it and allows automated installers to specify component choices.
+The LABEL of each component gives a fixed component ID, regardles of DESIGNATED changes. Other mods should use labels to detect component installation.
 
 ## 
 
@@ -204,6 +204,11 @@ The number of each is the component *`DESIGNATED`* number which gives it a fixed
 
 
 ## <a name="versions" id="versions"></a>Version History
+
+#### Version 2.6  (February 1, 2022)
+- Added ini settings to enable globally unique labels for PI.
+- Remove outdated information from readme.
+- Cosmetic corrections.
 
 #### Version 2.5 &nbsp;(January 30, 2021)
 
