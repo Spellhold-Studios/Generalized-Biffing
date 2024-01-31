@@ -1,0 +1,51 @@
+# Use export-ignore to skip files when downloading the exported source archives
+.* export-ignore
+
+# Common
+*.7z binary
+*.bat text eol=crlf
+*.bmp binary
+*.command text eol=lf
+*.csv text eol=crlf
+*.dll binary
+*.eff binary
+*.exe binary
+*.gif binary
+*.htm[l] text
+*.ico binary
+*.ini text eol=crlf
+*.jpg binary
+*.png binary
+*.ps1 text eol=crlf
+*.sh text eol=lf
+*.txt text eol=crlf
+*.y[a]ml text eol=lf
+*.zip binary
+
+# WeiDU/IE
+*.2da text
+*.are binary
+*.baf text
+*.bam binary
+*.bcs text eol=lf
+*.cre binary
+*.d text
+*.dlg binary
+*.ids text
+*.itm binary
+*.mos binary
+*.plt binary
+*.pro binary
+*.pvrz binary
+*.spl binary
+*.sto binary
+*.tp2 text
+*.tpa text
+*.tph text
+*.tpp text
+*.tra eol=crlf
+*.vef binary
+*.vvc binary
+*.wav binary
+*.wed binary
+*.wmp binary
