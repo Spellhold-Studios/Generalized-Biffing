@@ -43,7 +43,7 @@
 *.tpa text
 *.tph text
 *.tpp text
-*.tra eol=crlf
+*.tra text eol=crlf
 *.vef binary
 *.vvc binary
 *.wav binary
