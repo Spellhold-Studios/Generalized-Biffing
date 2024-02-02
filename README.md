@@ -200,12 +200,19 @@ The LABEL of each component gives a fixed component ID, regardles of DESIGNATED 
 
 ## <a name="versions" id="versions"></a>Version History
 
-#### Version 2.6  (February 1, 2022)
+#### v2.7 (February 2, 2024)
+- normalize EOL
+- update Infinity Auto Packager
+- AUTHOR > SUPPORT
+- remove outdated information from readme
+- cosmetic corrections
+
+#### v2.6 (February 1, 2022)
 - Added ini settings to enable globally unique labels for PI.
 - Remove outdated information from readme.
 - Cosmetic corrections.
 
-#### Version 2.5 &nbsp;(January 30, 2021)
+#### v2.5 (January 30, 2021)
 
 - Added Dynamic Install Syntax in *generalized_biffing.ini* metadata file to support AL|EN's "Project Infinity".
 - Added Brazilian-Portuguese translation (thanks Felipe).
@@ -213,7 +220,7 @@ The LABEL of each component gives a fixed component ID, regardles of DESIGNATED 
 
 ## 
 
-#### Version 2.4 &nbsp;(April 13, 2020)
+#### v2.4 (April 13, 2020)
 
 - Added missing EE-specific resource types: LUA, MENU, PNG and TTF.
 - EE-specific resource types are only considered for EE games.
@@ -221,7 +228,7 @@ The LABEL of each component gives a fixed component ID, regardles of DESIGNATED 
 
 ## 
 
-#### Version 2.3 &nbsp;(February 24, 2020)
+#### v2.3 (February 24, 2020)
 
 - Added *generalized_biffing.ini* metadata file to support AL|EN's "Project Infinity".
 - Added `DESIGNATED` numbers and "*generalized_biffing_min*" and "*generalized_biffing_all_files*" component `LABELS`.
@@ -237,53 +244,53 @@ The LABEL of each component gives a fixed component ID, regardles of DESIGNATED 
 
 ## 
 
-#### Version 2.2 &nbsp;(April 18, 2011)
+#### v2.2 (April 18, 2011)
 
 - Used a better algorithm for listing and moving files.
 
-#### Version 2.1 (January 4, 2011)
+#### v2.1 (January 4, 2011)
 
 - Unknown modifications.
 
 ## 
 
-#### Version 2.0 &nbsp;(November 30, 2010)
+#### v2.0 (November 30, 2010)
 
 - Added French translation (thanks Isaya).
 
 ## 
 
-#### Version ?.? &nbsp;(November 13, 2010)
+#### ?.? (November 13, 2010)
 
 - Files whose names don't fit in 8.3 characters aren't biffed.
 
 ## 
 
-#### Versions ?.? &nbsp;(July 23, 2010 - January 8, 2010)
+#### ?.? (July 23, 2010 - January 8, 2010)
 
 - Unknown modifications.
 
 ## 
 
-#### Version ?.? &nbsp;(September 16, 2009)
+#### ?.? (September 16, 2009)
 
 - Only for Linux users.
 
 ## 
 
-#### Version ?.? &nbsp;(August 3, 2009)
+#### ?.? (August 3, 2009)
 
 - Unknown modifications.
 
 ## 
 
-#### Version ??? &nbsp;(April 6, 2009)
+#### ??? (April 6, 2009)
 
 - Tightened regexp to ensure only valid files will be biffed anyhow.
 
 ## 
 
-#### Version 1.0 &nbsp;(March 10, 2009)
+#### v1.0 (March 10, 2009)
 
 - Initial release.
 <div align="right"><a href="#top">Back to top</a></div>
