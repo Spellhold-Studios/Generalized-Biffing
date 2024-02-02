@@ -1,11 +1,9 @@
 BACKUP ~generalized_biffing/backup~
-//AUTHOR ~the bigg~
-SUPPORT ~Spellhold Studios at http://www.shsforums.net/topic/39238-generalized-biffing/~
+SUPPORT ~Spellhold Studios at http://www.shsforums.net/topic/39238-generalized-biffing/~ //AUTHOR ~the bigg~
 
 VERSION ~v2.6~
 
 README ~generalized_biffing/readme/generalized_biffing-readme-%LANGUAGE%.html~ ~generalized_biffing/readme/generalized_biffing-readme-english.html~
-
 
 LANGUAGE ~English~
          ~English~
@@ -33,7 +31,6 @@ SUBCOMPONENT @1
 
 OUTER_SET biffing_all = 0
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
-
 
 /* ================ *
  *  Biff all files  *
