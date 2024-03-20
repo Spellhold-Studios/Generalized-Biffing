@@ -11,14 +11,17 @@ LANGUAGE ~English~
 
 LANGUAGE ~French (Traduction : Isaya)~
          ~french~
+         ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/french/setup.tra~
 
 LANGUAGE ~Italiano~
          ~italian~
+         ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/italian/setup.tra~
 
 LANGUAGE ~Brazilian Portuguese (translation by Felipe)~
          ~portuguese~
+         ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/portuguese/setup.tra~
 
 

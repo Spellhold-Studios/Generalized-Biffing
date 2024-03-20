@@ -10,3 +10,5 @@ Would you like to biff only wav&tis files, or all files found?
 
 @10 = ~Biff only wav, tis & bam files (recommended by The Bigg and Small World Dudes)~
 @11 = ~Biff all files (recommended by the Big World Dudes)~
+
+@100 = ~Skipping file: %BASH_FOR_FILE%~
