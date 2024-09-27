@@ -1,0 +1,97 @@
+/**
+ * Initializes arrays of blacklisted files.
+ *
+ * STR_VAR blacklist_path       Path to the blacklist file. Can be used to override the default path.
+ * RET_ARRAY blacklisted        List of literal file names to blacklist.
+ * RET_ARRAY blacklisted_regexp List of regular expression patterns for blacklisted files.
+ */
+DEFINE_ACTION_FUNCTION gb#get_blacklisted_files
+STR_VAR
+  blacklist_path = EVAL ~%MOD_FOLDER%/blacklist.txt~
+RET_ARRAY
+  blacklisted
+  blacklisted_regexp
+BEGIN
+  COPY ~%blacklist_path%~ ~%blacklist_path%~
+    READ_2DA_ENTRIES_NOW ~gb_blacklisted~ 1
+    FOR (row = 0; row < gb_blacklisted; ++row) BEGIN
+      READ_2DA_ENTRY_FORMER ~gb_blacklisted~ row 0 string
+      LPF gb#normalize STR_VAR string RET string END
+      PATCH_IF (NOT ~%string%~ STR_EQ ~~) BEGIN
+        SET is_regexp = (INDEX(EXACT_MATCH ~:~ ~%string%~) = 0)
+        PATCH_IF (is_regexp) BEGIN
+          INNER_PATCH_SAVE string ~%string%~ BEGIN DELETE_BYTES 0 1 END
+          SET $blacklisted_regexp(~%string%~) = 1
+        END ELSE PATCH_IF (NOT ~%string%~ STR_EQ ~~) BEGIN
+          SET $blacklisted(~%string%~) = 1
+        END
+      END
+    END
+  BUT_ONLY IF_EXISTS
+END
+
+/**
+ * Determines whether a given filename should be blacklisted from the biffing operation.
+ *
+ * STR_VAR filename           File name to check for exclusion.
+ * STR_VAR blacklisted        Name of the array with literal file names to blacklist.
+ * STR_VAR blacklisted_regexp Name of the array with regular expressions patterns for blacklisted files.
+ * RET result                 A non-zero value indicates a match.
+ */
+DEFINE_ACTION_FUNCTION gb#is_blacklisted
+STR_VAR
+  filename = ~~
+  blacklisted = ~blacklisted~
+  blacklisted_regexp = ~blacklisted_regexp~
+RET
+  result  // non-zero result indicates a match
+BEGIN
+  LAF gb#normalize STR_VAR string = EVAL ~%filename%~ RET string END
+
+  // checking verbatim file list
+  OUTER_SET result = VARIABLE_IS_SET $EVAL ~%blacklisted%~(~%string%~)
+
+  ACTION_IF (NOT result) BEGIN
+    // checking regular expression list
+    ACTION_PHP_EACH EVAL ~%blacklisted_regexp%~ AS pattern => _ BEGIN
+      ACTION_IF (NOT result) BEGIN
+        OUTER_SET result = (~%string%~ STRING_MATCHES_REGEXP ~%pattern%~ = 0)
+      END
+    END
+  END
+END
+
+/**
+ * Normalizes a given string.
+ *
+ * INT_VAR trim           Boolean that indicates whether to remove leading and trailing spaces.
+ * INT_VAR lower_case     Boolean that indicates whether to lower-case the string.
+ * INT_VAR remove_comment Boolean that indicates whether to remove line comments.
+ * STR_VAR string         Contains the input string.
+ * RET string             Returns the normalized version of the input string.
+ */
+DEFINE_DIMORPHIC_FUNCTION gb#normalize
+INT_VAR
+  trim = 1            // whether to remove leading and trailing spaces
+  lower_case = 1      // whether to lower-case the string
+  remove_comment = 1  // whether to remove line comments
+STR_VAR
+  string = ~~         // input string
+RET
+  string              // normalized string
+BEGIN
+  OUTER_PATCH_SAVE string ~%string%~ BEGIN
+    PATCH_IF (remove_comment) BEGIN
+      REPLACE_TEXTUALLY ~//.*~ ~~
+    END
+
+    PATCH_IF (trim) BEGIN
+      REPLACE_TEXTUALLY ~^[ %TAB%%WNL%]+~ ~~
+      REPLACE_TEXTUALLY ~[ %TAB%%WNL%]+$~ ~~
+    END
+  END
+
+  ACTION_IF (lower_case) BEGIN
+    ACTION_TO_LOWER ~string~
+  END
+END

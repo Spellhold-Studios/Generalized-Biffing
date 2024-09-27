@@ -1,0 +1,6 @@
+// List of files that should be excluded from the biffing operation.
+// Entries preceded by a colon (:) are treated as regular expressions.
+// EEex files:
+:B3.+\.lua
+:EEex_.+\.lua
+M___EEex.lua
