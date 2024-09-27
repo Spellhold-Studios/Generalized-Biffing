@@ -1,51 +1,97 @@
-# Use export-ignore to skip files when downloading the exported source archives
-.* export-ignore
+# Don't add Git-related files to the exported source archives
+.gitattributes export-ignore
+.github        export-ignore
+.gitignore     export-ignore
 
-# Common
-*.7z binary
-*.bat text eol=crlf
-*.bmp binary
+# Unix shell scripts require LF line ending
 *.command text eol=lf
-*.csv text eol=crlf
-*.dll binary
-*.eff binary
-*.exe binary
-*.gif binary
-*.htm[l] text
-*.ico binary
-*.ini text eol=crlf
-*.jpg binary
-*.png binary
-*.ps1 text eol=crlf
-*.sh text eol=lf
-*.txt text eol=crlf
-*.y[a]ml text eol=lf
-*.zip binary
+*.sh      text eol=lf
 
-# WeiDU/IE
-*.2da text
-*.are binary
-*.baf text
-*.bam binary
-*.bcs text eol=lf
-*.cre binary
-*.d text
-*.dlg binary
-*.ids text
-*.itm binary
-*.mos binary
-*.plt binary
-*.pro binary
+# Windows scripts require CR LF line ending
+*.ahk  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Store these text files with LF line ending in the repo object database
+# Auto convert them to CR LF for working directories on Windows
+*.2da  text
+*.baf  text
+*.bio  text
+*.d    text
+*.glsl text
+*.gui  text
+*.htm  text
+*.html text
+*.ids  text
+*.ini  text
+*.lua  text
+*.md   text
+*.menu text
+*.mus  text
+*.sql  text
+*.tp2  text
+*.tpa  text
+*.tph  text
+*.tpp  text
+*.tra  text
+*.txt  text
+*.yaml text
+*.yml  text
+
+# Git-related metadata
+.gitattributes text
+.gitignore     text
+
+# Compiled IE scripts require LF line ending
+*.bcs  text eol=lf
+*.bs   text eol=lf
+
+# Treat these files as non-text and don't change the line ending
+*.acm  binary
+*.are  binary
+*.bam  binary
+*.bif  binary
+*.bmp  binary
+*.chr  binary
+*.chu  binary
+*.cre  binary
+*.dlg  binary
+*.dll  binary
+*.eff  binary
+*.exe  binary
+*.fnt  binary
+*.gam  binary
+*.gif  binary
+*.ico  binary
+*.itm  binary
+*.jpeg binary
+*.jpg  binary
+*.key  binary
+*.mbc  binary
+*.mos  binary
+*.moz  binary
+*.mve  binary
+*.ogg  binary
+*.plt  binary
+*.png  binary
+*.pro  binary
 *.pvrz binary
-*.spl binary
-*.sto binary
-*.tp2 text
-*.tpa text
-*.tph text
-*.tpp text
-*.tra text eol=crlf
-*.vef binary
-*.vvc binary
-*.wav binary
-*.wed binary
-*.wmp binary
+*.sav  binary
+*.spl  binary
+*.sto  binary
+*.tbc  binary
+*.tis  binary
+*.tiz  binary
+*.tlk  binary
+*.toh  binary
+*.tot  binary
+*.ttf  binary
+*.vef  binary
+*.vvc  binary
+*.wav  binary
+*.wbm  binary
+*.webp binary
+*.wed  binary
+*.wfx  binary
+*.wmp  binary
