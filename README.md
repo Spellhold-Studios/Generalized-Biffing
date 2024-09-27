@@ -41,6 +41,7 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 **Contributors**  
 
+- Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6) 
 - ALIEN &nbsp;&ndash;&nbsp; maintenance (version 2.7)
 - Argent77 &nbsp;&ndash;&nbsp; BG:EE compatibility patch
 
