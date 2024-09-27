@@ -33,9 +33,15 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 <hr>
 
-⚠️ **Warning:** It is recommended to install Generalized Biffing with [WeiDU v246](http://github.com/WeiDUorg/weidu/releases/tag/v246.00) to avoid issues related to the unsupported character encoding used by other mods. WeiDU v247 and up deprecated functions operating on the Latin-1 character set and now the installation requires only US-ASCII characters.
+⚠️ **Warning:** As of WeiDU v247, some functions operating on the Latin-1 (8859-1) character set have been depracated and now use only US-ASCII characters. Biffing files with non-ASCII characters in their filenames may cause the game to crash.
 
-[Read this](http://www.shsforums.net/topic/39238-generalized-biffing/page-5#entry613346) to prevent game crashes if you want to play with Infinity Animations and Generalized Biffing.
+Follow these steps before installing Generalized Biffing at the end of your mod install order:
+
+1. Remove all `setup-modname.exe` files from your BG2 game directory.
+2. Extract Generalized Biffing into the game directory, but don't install it.
+3. Download [WeiDU v246](https://github.com/WeiDUorg/weidu/releases/tag/v246.00).
+4. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
+5. Install Generalized Biffing with WeiDU v246.
 
 <hr>
 
