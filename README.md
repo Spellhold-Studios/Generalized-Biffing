@@ -27,7 +27,17 @@
 
 This WeiDU mod allows you to biff the content of the override folder for improved performance; that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
 
-**Note:** Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
+<hr>
+
+🗒️ **Note:** Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
+
+<hr>
+
+⚠️ **Warning:** It is recommended to install Generalized Biffing with [WeiDU v246](http://github.com/WeiDUorg/weidu/releases/tag/v246.00) to avoid issues related to the unsupported character encoding used by other mods. WeiDU v247 and up deprecated functions operating on the Latin-1 character set and now the installation requires only US-ASCII characters.
+
+[Read this](http://www.shsforums.net/topic/39238-generalized-biffing/page-5#entry613346) to prevent game crashes if you want to play with Infinity Animations and Generalized Biffing.
+
+<hr>
 
 *Please check the complete [Readme](https://spellhold-studios.github.io/readmes/generalized-biffing/generalized_biffing-readme-english.html) to learn more about this mod before installation.*
 
