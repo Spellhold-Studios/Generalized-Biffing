@@ -20,9 +20,9 @@ LANGUAGE ~Italiano~
          ~generalized_biffing/tra/italian/setup.tra~
 
 LANGUAGE ~Brazilian Portuguese (translation by Felipe)~
-         ~portuguese~
+         ~brazilian-portuguese~
          ~generalized_biffing/tra/english/setup.tra~
-         ~generalized_biffing/tra/portuguese/setup.tra~
+         ~generalized_biffing/tra/brazilian-portuguese/setup.tra~
 
 
 /* ===================================== *
