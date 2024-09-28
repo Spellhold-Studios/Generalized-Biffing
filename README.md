@@ -37,7 +37,7 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 Follow these steps before installing Generalized Biffing at the end of your mod install order:
 
-1. Remove all `setup-modname.exe` files from your BG2 game directory.
+1. Remove all `setup-modname.exe` files from your game directory.
 2. Extract Generalized Biffing into the game directory, but don't install it.
 3. Download [WeiDU v246](https://github.com/WeiDUorg/weidu/releases/tag/v246.00).
 4. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
@@ -57,9 +57,10 @@ Follow these steps before installing Generalized Biffing at the end of your mod 
 
 **Contributors**  
 
-- Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6) 
+- Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6)
 - ALIEN &nbsp;&ndash;&nbsp; maintenance (version 2.7)
-- Argent77 &nbsp;&ndash;&nbsp; BG:EE compatibility patch
+- skellytz &nbsp;&ndash;&nbsp; maintenance (version 2.8)
+- Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition and EEex compatibility patches
 
 **Translators**  
 

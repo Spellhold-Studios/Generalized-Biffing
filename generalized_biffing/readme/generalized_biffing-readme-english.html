@@ -33,7 +33,7 @@
 			Author: the bigg (Valerio Bigiani)
 		</p>
 		<p class="about">
-			<a href="http://www.shsforums.net/topic/39238-generalized-biffing/">Mod Website and Forum</a> &#8226; <a href="http://www.shsforums.net/files/file/741-generalized-biffing/">Download</a> &#8226; <a href="https://github.com/SpellholdStudios/generalized_biffing/releases/latest">GitHub</a> &#8226; <span id="latestVersion"></span>
+			<a href="http://www.shsforums.net/topic/39238-generalized-biffing/">Mod Website and Forum</a> &#8226; <a href="https://github.com/Spellhold-Studios/Generalized-Biffing/releases/latest">Download</a> &#8226; <a href="https://github.com/Spellhold-Studios/Generalized-Biffing">GitHub</a> &#8226; <span id="latestVersion"></span>
 		</p>
 		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
 
@@ -50,7 +50,7 @@
 		<h2>Overview</h2><br>
 
 		<p>
-			This <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod allows you to biff the content of the override folder for improved performance, that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
+			This <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod allows you to biff the content of the override folder for improved performance; that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
 		</p><br>
 
 		<p>
@@ -80,7 +80,7 @@
 		<h3>Other Mods Compatibility</h3>
 
 		<p style="margin-top:2%;">
-			This mod is a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v25/">report them on the forum</a>!
+			This mod is a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> mod, and therefore should be compatible with all WeiDU mods. It must be installed after all other mods. If you encounter any bugs, please report them on the <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">forum</a> or <a href="https://github.com/Spellhold-Studios/Generalized-Biffing">GitHub</a>!
 		</p><br>
 
 
@@ -144,7 +144,27 @@
 		</p>
 		<p>
 			Run <strong><span class="weidu">&nbsp;setup-generalized_biffing.exe&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise change components.
-		</p></br>
+		</p><br>
+
+
+		<hr style="width: 90%;"/><br>
+
+
+		<h3>Warning!</h3>
+
+		<p style="margin-top:2%;">
+			<strong>As of WeiDU v247, some functions operating on the Latin-1 (8859-1) character set have been depracated and now use only US-ASCII characters. Biffing files with non-ASCII characters in their filenames may cause the game to crash.</strong>
+		</p>
+		<p>
+			Follow these steps before installing Generalized Biffing at the end of your mod install order:
+		</p>
+		<ul>
+			<li>Remove all <span class="weidu"><strong>&nbsp;setup-modname.exe&nbsp;</strong></span> files from your game directory.</li>
+			<li>Extract Generalized Biffing into the game directory, but don't install it.</li>
+			<li>Download <a href="https://github.com/WeiDUorg/weidu/releases/tag/v246.00"><strong>WeiDU v246</strong></a>.</li>
+			<li>Rename <span class="weidu"><strong>&nbsp;weidu.exe&nbsp;</strong></span> from the v246 package to <span class="weidu"><strong>&nbsp;setup-generalized_biffing.exe&nbsp;</strong></span> and put it in the game directory overwriting the existing one.</li>
+			<li>Install Generalized Biffing with WeiDU v246.</li>
+		</ul><br>
 
 
 		<hr style="width: 90%;"/><br>
@@ -248,19 +268,10 @@
 			<strong>Symptom: Game freezes or crashes to desktop (CTDs)</strong>
 		</p><br>
 		<p>
-			Sometimes the game displays an "assertion error" in a pop-up window when this happens, but often times it doesn't. To enable the full error message, open the file <strong>baldur.ini</strong> in your game folder with a text editor (such as Notepad). If you find you can't edit it or save changes in Windows Vista or 7, see <a href="http://forums.bioware.com/viewtopic.html?topic=662080&forum=10">this topic</a> for assistance.
+			Sometimes the game displays an "assertion error" in a pop-up window when this happens, but often times it doesn't. To enable the full error message, open the file <strong>baldur.ini</strong> in your game folder with a text editor (such as Notepad).
 		</p>
 		<p>
 			Under the [Program Options] section in the file, type <strong>Logging On=1</strong> (unless it's already there). While you're there, you may also want to make sure <strong>Debug Mode=1</strong> is there to enable the <a href="https://gibberlings3.github.io/iesdp/appendices/clua/bg2.htm">CLUA Console</a> for debugging and testing. Save the file and exit. Now go back into the game and try to reproduce the crash. Then look in your game folder again for the <strong>Baldur.err</strong> file and open it with a text editor to analyse its contents.
-		</p><br>
-
-		<hr style="width: 90%;"/><br>
-
-		<p>
-			<strong>Symptom: Game crashes with no Baldur.err log and shows either a black screen or a pop-up window indicating an error at offset 005ca8a8</strong>
-		</p><br>
-		<p>
-			This usually indicates an animation-related issue. Make sure you have the latest version of the mod. If you've installed other mods after it and have this issue, install the fix available <a href="http://www.shsforums.net/files/file/884-ia-aurora-low-fix/">here</a>.
 		</p><br>
 
 		<hr style="width: 90%;"/><br>
@@ -286,7 +297,7 @@
 			<strong>Other issues</strong>
 		</p><br>
 		<p>
-			If none of this resolves your issue, or you have mod-specific issues, please report the problem in the mod's <a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v25/">forum</a>. Include the contents of your <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.log file in the post, or attach it if it's large.
+			If none of this resolves your issue, or you have mod-specific issues, please report the problem on the mod's <a href="http://www.shsforums.net/topic/39238-generalized-biffing/">forum</a> or <a href="https://github.com/Spellhold-Studios/Generalized-Biffing">GitHub</a>. Include the contents of your <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.log file in the post, or attach it if it's large.
 		</p><br>
 
 		<address>
@@ -301,20 +312,36 @@
 		<h2>Credits</h2><br>
 
 			<span class="t1">Author:</span> <span class="t2"><a href="http://www.shsforums.net/user/2083-the bigg/">the bigg</a></span><br>
-			<span class="t1">Support:</span> <span class="t2"><a href="http://www.shsforums.net/topic/60716-generalized-biffing-updated-to-v25/">SHS Staff</a></span><br>
+			<span class="t1">Support:</span> <span class="t2"><a href="https://github.com/Spellhold-Studios">SHS Staff</a></span><br>
 
 		<hr style="clear: both; width: 90%; color: transparent; background-color: transparent; " /><br>
 
 		<hr style="width: 90%;"/><br>
 
-		<h5>Special Acknowledgements to:</h5>
+		<h5>Contributors</h5>
 
  		  <ul class="version-list c1">
-			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
-			<li>Brazilian-Portuguese translation: Felipe.</li>
-			<li>French translation: Isaya.</li>
-			<li>Argent77: BG:EE compatibility patch.</li>
-			<li>Everyone else from <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, and the other Infinity Engine gaming and modding communities who offered their help and support.</li>
+			<li>Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6)</li>
+			<li>AL|EN &nbsp;&ndash;&nbsp; maintenance (version 2.7)</li>
+			<li>skellytz &nbsp;&ndash;&nbsp; maintenance (version 2.8)</li>
+			<li>Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition and EEex compatibility patches</li>
+		  </ul><br>
+
+		<hr style="width: 90%;"/><br>
+
+		<h5>Translators</h5>
+
+ 		  <ul class="version-list c1">
+			<li>Felipe &nbsp;&ndash;&nbsp; Brazilian Portuguese</li>
+			<li>Isaya &nbsp;&ndash;&nbsp; French</li>
+		  </ul><br>
+
+		<hr style="width: 90%;"/><br>
+
+		<h5>Special thanks</h5>
+
+ 		  <ul class="version-list c1">
+			<li>Everyone else from <a href="https://www.gibberlings3.net/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a>, and other Infinity Engine gaming and modding communities who offered their help and support.</li>
 		  </ul><br>
 
 		<hr style="width: 90%;"/><br>
@@ -364,6 +391,23 @@
 
 		<h2>Version History</h2><br>
 		
+		<h6>Version 2.8 &nbsp;(September 28, 2024)</h6>
+
+		  <ul>
+			<li>Added a warning and instructions in relation to the deprecated Latin-1 character set as of WeiDU v247.</li>
+			<li>Added compatibility with EEex (thanks to Argent77).</li>
+			<li>Updated mod metadata for PI.</li>
+		  </ul><br>
+
+		<h6>Version 2.7 &nbsp;(February 2, 2024)</h6>
+
+		  <ul>
+			<li>Updated Infinity Auto Packager.</li>
+			<li>Normalized EOL.</li>
+			<li>Removed outdated information from readme.</li>
+			<li>Cosmetic corrections.</li>
+		  </ul><br>
+
         <h6>Version 2.6 &nbsp;(February 1, 2022)</h6>
 
 		  <ul>
