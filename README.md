@@ -12,6 +12,15 @@
 [![Games](https://img.shields.io/badge/games-BG1%20%a0%20BG2%20%a0%20BGT%20%a0%20IWD1%20%a0%20IWD2%20%a0%20PST-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 [![Language](https://img.shields.io/badge/language-en%20%a0%20fr%20%a0%20it%20%a0%20pt--BR-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 
+<!--
+Badges white space separator: %20%a0%20
+Badges ":" (colon) symbol: %3A
+Badges "-" (hyphen) symbol: --
+Games full list: BG1 BG2 BGT BG%3AEE SoD BG2%3AEE EET IWD1 IWD2 IWD%3AEE PST PST%3AEE
+IETF language tags: https://support.elucidat.com/hc/en-us/articles/6068623875217-IETF-language-tags
+Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
+-->
+
 # Generalized Biffing
 
 *A Spellhold Studios mod for Infinity Engine games*
@@ -54,7 +63,7 @@ If you also want to install any of the above mods, please follow these steps bef
 
 ## Credits
 
-<!-- double white space after each credits **Heading** -->
+<!-- double space after each credits **Heading** if you don't need lists -->
 
 **Author**  
 
