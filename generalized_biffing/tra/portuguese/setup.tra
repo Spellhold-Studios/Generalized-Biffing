@@ -10,3 +10,5 @@ Você gostaria de converter pro formato .bif só os arquivos wav&tis ou todos os a
 
 @10 = ~Converter pro formato .bif só os arquivos wav, tis & bam (recomendado pelo The Bigg e os outros Small World Dudes)~
 @11 = ~Converter todos os arquivos pro formato .bif (recomendado pelos Big World Dudes)~
+
+@100 = ~Ignorando arquivo: %BASH_FOR_FILE%~
