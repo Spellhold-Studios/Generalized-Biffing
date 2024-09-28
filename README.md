@@ -29,19 +29,24 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 <hr>
 
-🗒️ **Note:** Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
+:spiral_notepad: **Note:** Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
 
 <hr>
 
-⚠️ **Warning:** As of WeiDU v247, some functions operating on the Latin-1 (8859-1) character set have been depracated and now use only US-ASCII characters. Biffing files with non-ASCII characters in their filenames may cause the game to crash.
+:warning: **Warning: As of WeiDU v247, some functions operating on the Latin-1 (8859-1) character set have been depracated and now use only US-ASCII characters. Biffing files with non-ASCII characters in their filenames may cause the game to crash.**
 
-Follow these steps before installing Generalized Biffing at the end of your mod install order:
+ It has been confirmed that the following mods may suffer from this issue if the affected files are biffed:
+
+- **Infinity Animations (all versions 5.x.x and below)**
+
+If you also want to install any of the above mods, please follow these steps before installing Generalized Biffing at the end of your mod install order: 
 
 1. Remove all `setup-modname.exe` files from your game directory.
-2. Extract Generalized Biffing into the game directory, but don't install it.
-3. Download [WeiDU v246](https://github.com/WeiDUorg/weidu/releases/tag/v246.00).
-4. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
-5. Install Generalized Biffing with WeiDU v246.
+2. Download [Generalized Biffing v2.7](https://github.com/Spellhold-Studios/Generalized-Biffing/releases/tag/v2.7) (warning: this version does not support EEex).
+3. Extract Generalized Biffing into the game directory, but don't install it.
+4. Download [WeiDU v246](https://github.com/WeiDUorg/weidu/releases/tag/v246.00).
+5. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
+6. Install Generalized Biffing with WeiDU v246.
 
 <hr>
 
