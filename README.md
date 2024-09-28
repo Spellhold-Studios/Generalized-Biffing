@@ -48,6 +48,8 @@ This WeiDU mod allows you to biff the content of the override folder for improve
 
 - **Infinity Animations (all versions 5.x.x and below)**
 
+<br>
+
 If you also want to install any of the above mods, please follow these steps before installing Generalized Biffing at the end of your mod install order: 
 
 1. Remove all `setup-modname.exe` files from your game directory.
@@ -57,6 +59,9 @@ If you also want to install any of the above mods, please follow these steps bef
 5. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
 6. Install Generalized Biffing with WeiDU v246.
 
+<br>
+
+Alternatively, if you need EEex compatibility, install the latest Generalized Biffing with [WeiDU v249-x86-legacy](https://github.com/WeiDUorg/weidu/releases/tag/v249.00) (requires an OS with 32-bit application support.)
 <hr>
 
 *Please check the complete [Readme](https://spellhold-studios.github.io/readmes/generalized-biffing/generalized_biffing-readme-english.html) to learn more about this mod before installation.*
