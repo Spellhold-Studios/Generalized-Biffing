@@ -23,7 +23,7 @@ Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
 
 # Generalized Biffing
 
-*A Spellhold Studios mod for Infinity Engine games*
+*A Spellhold Studios tool for Infinity Engine games*
 
 <br>
 
@@ -34,7 +34,7 @@ Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
 
 ## Introduction
 
-This WeiDU mod allows you to biff the content of the override folder for improved performance; that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
+This WeiDU tool allows you to biff the content of the override folder for improved performance; that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
 
 <hr>
 
@@ -64,7 +64,7 @@ If you also want to install any of the above mods, please follow these steps bef
 Alternatively, if you need EEex compatibility, install the latest Generalized Biffing with [WeiDU v249-x86-legacy](https://github.com/WeiDUorg/weidu/releases/tag/v249.00) (requires an OS with 32-bit application support.)
 <hr>
 
-*Please check the complete [Readme](https://spellhold-studios.github.io/readmes/generalized-biffing/generalized_biffing-readme-english.html) to learn more about this mod before installation.*
+*Please check the complete [Readme](https://spellhold-studios.github.io/readmes/generalized-biffing/generalized_biffing-readme-english.html) to learn more about this tool before installation.*
 
 ## Credits
 
@@ -77,7 +77,7 @@ Alternatively, if you need EEex compatibility, install the latest Generalized Bi
 **Contributors**  
 
 - Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6)
-- ALIEN &nbsp;&ndash;&nbsp; maintenance (version 2.7)
+- AL|EN &nbsp;&ndash;&nbsp; maintenance (version 2.7)
 - skellytz &nbsp;&ndash;&nbsp; maintenance (version 2.8)
 - Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition and EEex compatibility patches
 
