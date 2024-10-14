@@ -1,14 +1,16 @@
+// Encoding: US-ASCII
+
 @1 = ~Generalized Biffing~
-@2 = ~Você gostaria de converter pro formato .bif só os arquivos wav&tis ou todos os arquivos achados?
-0] só os wav&tis&bam (recomendado pelo The Bigg e os outros Small World Dudes)
+@2 = ~Voce gostaria de converter pro formato .bif so os arquivos wav&tis ou todos os arquivos achados?
+0] so os wav&tis&bam (recomendado pelo The Bigg e os outros Small World Dudes)
 1] todos os arquivos (recomendado pelos Big World Dudes)~
-@3 = ~Você deve ser cabeça-dura. Por favor insira 0 ou 1.
+@3 = ~Voce deve ser cabeca-dura. Por favor insira 0 ou 1.
 
-Você gostaria de converter pro formato .bif só os arquivos wav&tis ou todos os arquivos achados?
-0] só os wav&tis&bam (recomendado pelo The Bigg e os outros Small World Dudes)
+Voce gostaria de converter pro formato .bif so os arquivos wav&tis ou todos os arquivos achados?
+0] so os wav&tis&bam (recomendado pelo The Bigg e os outros Small World Dudes)
 1] todos os arquivos (recomendado pelos Big World Dudes)~
 
-@10 = ~Converter pro formato .bif só os arquivos wav, tis & bam (recomendado pelo The Bigg e os outros Small World Dudes)~
+@10 = ~Converter pro formato .bif so os arquivos wav, tis & bam (recomendado pelo The Bigg e os outros Small World Dudes)~
 @11 = ~Converter todos os arquivos pro formato .bif (recomendado pelos Big World Dudes)~
 
 @100 = ~Ignorando arquivo: %BASH_FOR_FILE%~
