@@ -1,25 +1,30 @@
 BACKUP ~generalized_biffing/backup~
-SUPPORT ~Spellhold Studios at http://www.shsforums.net/topic/39238-generalized-biffing/~ //AUTHOR ~the bigg~
+SUPPORT ~http://www.shsforums.net/topic/39238-generalized-biffing/~ // AUTHOR ~the bigg~
 
 VERSION ~v2.8~
 
 README ~generalized_biffing/readme/generalized_biffing-readme-%LANGUAGE%.html~ ~generalized_biffing/readme/generalized_biffing-readme-english.html~
 
 LANGUAGE ~English~
-         ~English~
+         ~english~
          ~generalized_biffing/tra/english/setup.tra~
 
-LANGUAGE ~French (Traduction : Isaya)~
+LANGUAGE ~francais (traduction : Isaya)~
          ~french~
          ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/french/setup.tra~
 
-LANGUAGE ~Italiano~
+LANGUAGE ~italiano~
          ~italian~
          ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/italian/setup.tra~
 
-LANGUAGE ~Brazilian Portuguese (translation by Felipe)~
+LANGUAGE ~polski~
+         ~polish~
+         ~generalized_biffing/tra/english/setup.tra~
+         ~generalized_biffing/tra/polish/setup.tra~
+
+LANGUAGE ~portugues (Brasil) (traducao: Felipe)~
          ~brazilian-portuguese~
          ~generalized_biffing/tra/english/setup.tra~
          ~generalized_biffing/tra/brazilian-portuguese/setup.tra~

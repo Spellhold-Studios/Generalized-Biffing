@@ -1,0 +1,8 @@
+// encoding: US-ASCII
+
+@1 = ~Zbiorcza archiwizacja plikow do formatu BIFF~
+
+@10 = ~Utworz archiwa tylko dla plikow WAV, TIS i BAM (zalecane przez autora oraz dla mniejszych modyfikacji)~
+@11 = ~Utworz archiwa dla wszystkich plikow (zalecane glownie dla megamodyfikacji)~
+
+@100 = ~Pomijanie pliku: %BASH_FOR_FILE%~
