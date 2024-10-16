@@ -10,7 +10,7 @@
 [![Views](https://badges.pufler.dev/visits/Spellhold-Studios/Generalized-Biffing?label=views&color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 <br>
 [![Games](https://img.shields.io/badge/games-BG1%20%a0%20BG2%20%a0%20BGT%20%a0%20IWD1%20%a0%20IWD2%20%a0%20PST-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
-[![Language](https://img.shields.io/badge/language-en%20%a0%20fr%20%a0%20it%20%a0%20pt--BR-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
+[![Language](https://img.shields.io/badge/language-en%20%a0%20fr%20%a0%20it%20%a0%20pl%20%a0%20pt--BR-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 
 <!--
 Badges white space separator: %20%a0%20
@@ -76,10 +76,10 @@ Alternatively, if you need EEex compatibility, install the latest Generalized Bi
 
 **Contributors**  
 
-- Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.6)
-- AL|EN &nbsp;&ndash;&nbsp; maintenance (version 2.7)
-- skellytz &nbsp;&ndash;&nbsp; maintenance (version 2.8)
 - Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition and EEex compatibility patches
+- Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.5)
+- AL|EN &nbsp;&ndash;&nbsp; maintenance (versions 2.6&ndash;2.7)
+- skellytz &nbsp;&ndash;&nbsp; maintenance (versions 2.8&ndash;2.9)
 
 **Translators**  
 
