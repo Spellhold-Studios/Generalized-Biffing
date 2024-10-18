@@ -4,3 +4,5 @@
 :B3.+\.lua
 :EEex_.+\.lua
 M___EEex.lua
+// non-ASCII files:
+:.*[^!-~]+.*
