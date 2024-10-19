@@ -97,11 +97,12 @@ BEGIN
 END
 
 /**
- * Returns a filename that consists of the index number (0-padded to fill 8 characters)
+ * Returns a filename that consists of a prefix, an index number (0-padded to fill 8 characters),
  * and the file extension of "source_file".
  *
  * INT_VAR index        A non-negative numeric index.
  * STR_VAR source_file  Source filename of the associated file.
+ * STR_VAR prefix       An optional filename prefix.
  * RET filename         Replacement filename consisting of index and source file extension.
  */
 DEFINE_DIMORPHIC_FUNCTION get_replacement_filename
