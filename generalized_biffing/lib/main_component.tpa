@@ -15,9 +15,6 @@ END ELSE BEGIN
   AT_UNINSTALL ~del /q /f generalized_biffing\prod\0~ EXACT
 END
 
-<<<<<<<< .../list-of-files
->>>>>>>>
-
 // this defines a one to eight character regular expression for matching resrefs
 // -----------------------------------------------------------------------------
 OUTER_TEXT_SPRINT ~char~ ~[^ %TAB%%WNL%]~
@@ -43,28 +40,52 @@ MKDIR ~generalized_biffing/prod/0/rej~
 // getting list of files that must not be biffed
 LAF gb#get_blacklisted_files RET_ARRAY blacklisted blacklisted_regexp END
 
-OUTER_SET currentTotal = 0
-OUTER_SET currentFile = 0
-ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
-  LAF gb#is_blacklisted STR_VAR filename = EVAL ~%BASH_FOR_FILE%~ RET result END
-  ACTION_IF (NOT result) BEGIN
-    ACTION_IF %BASH_FOR_SIZE% + currentTotal > 30000000 /* 30M */ && currentTotal > 0 BEGIN
-      MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
-      OUTER_SET currentFile = currentFile + 1
-      OUTER_SET currentTotal = 0
-      MKDIR ~generalized_biffing/prod/0/biffs/%currentFile%~
-    END
-    MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/biffs/%currentFile%/%BASH_FOR_FILE%~
-    OUTER_SET currentTotal += BASH_FOR_SIZE
-  END ELSE BEGIN
-    PRINT @100  // Skipping file: %BASH_FOR_FILE%
-  END
+// getting list of files to biff
+PRINT @101 // Preparing files for biffing...
+LAF prepare_filelist
+  STR_VAR
+    ext_pattern  = EVAL ~%ext%~
+    file_pattern = EVAL ~%myRegExp%~
+  RET
+    list_size
+  RET_ARRAY
+    file_list
+    src_to_repl_file
+    repl_to_dst_resref
 END
 
+// biffing files
+PRINT @102 // Biffing files...
+OUTER_SET currentTotal = 0
+OUTER_SET currentFile = 0
+OUTER_FOR (i = 0; i < list_size; ++i) BEGIN
+  OUTER_SPRINT filename $file_list(~%i%~)
+  OUTER_SPRINT src_file ~override/%filename%~
+
+  OUTER_SET fileSize = SIZE_OF_FILE ~%src_file%~
+  ACTION_IF fileSize + currentTotal > 30000000 /* 30M */ && currentTotal > 0 BEGIN
+    MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
+    OUTER_SET currentFile += 1
+    OUTER_SET currentTotal = 0
+    MKDIR ~generalized_biffing/prod/0/biffs/%currentFile%~
+  END
+
+  ACTION_IF (VARIABLE_IS_SET $src_to_repl_file(~%filename%~)) BEGIN
+    OUTER_SPRINT dst_file $src_to_repl_file(~%filename%~)
+  END ELSE BEGIN
+    OUTER_SPRINT dst_file ~%filename%~
+  END
+  OUTER_SPRINT dst_file ~generalized_biffing/prod/0/biffs/%currentFile%/%dst_file%~
+  MOVE ~%src_file%~ ~%dst_file%~
+  OUTER_SET currentTotal += fileSize
+END
+
+// biffing remaining files
 ACTION_IF currentTotal > 0 BEGIN
   MAKE_BIFF ~tb#gen%currentFile%~ BEGIN ~generalized_biffing/prod/0/biffs/%currentFile%~ ~^.*$~ END
 END
 
+// storing rejected files
 OUTER_TEXT_SPRINT ~myRegExp~ ~^%9char%.%ext%$~
 ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
   LAF gb#is_blacklisted STR_VAR filename = EVAL ~%BASH_FOR_FILE%~ RET result END
@@ -76,4 +97,23 @@ ACTION_BASH_FOR ~override~ ~%myRegExp%~ BEGIN
       MOVE ~override/%BASH_FOR_FILE%~ ~generalized_biffing/prod/0/rej/%BASH_FOR_FILE%~
     END
   END
+END
+
+// restoring original resource names in CHITIN.KEY
+ACTION_IF (list_size > 0) BEGIN
+  COPY ~chitin.key~ ~chitin.key~
+    READ_ASCII 0 sig (8)
+    PATCH_IF (~%sig%~ STR_EQ ~KEY V1  ~) BEGIN
+      READ_LONG 0x0c num_entries
+      READ_LONG 0x14 ofs_entries
+      FOR (i = 0; i < num_entries; ++i) BEGIN
+        SET cur_ofs = ofs_entries + i * 0x0e
+        READ_ASCII cur_ofs resname (8) NULL
+        PATCH_IF (VARIABLE_IS_SET $repl_to_dst_resref(~%resname%~)) BEGIN
+          SPRINT new_resname $repl_to_dst_resref(~%resname%~)
+          WRITE_ASCIIE cur_ofs ~%new_resname%~ (8)
+        END
+      END
+    END
+  BUT_ONLY
 END
