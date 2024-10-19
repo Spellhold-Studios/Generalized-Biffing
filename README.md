@@ -9,8 +9,9 @@
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Generalized-Biffing/total?color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 [![Views](https://badges.pufler.dev/visits/Spellhold-Studios/Generalized-Biffing?label=views&color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 <br>
-[![Games](https://img.shields.io/badge/games-BG1%20%a0%20BG2%20%a0%20BGT%20%a0%20IWD1%20%a0%20IWD2%20%a0%20PST-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 [![Language](https://img.shields.io/badge/language-en%20%a0%20fr%20%a0%20it%20%a0%20pl%20%a0%20pt--BR-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
+[![Games](https://img.shields.io/badge/games-BG1%20%a0%20BG2%20%a0%20BGT%20%a0%20BG%3AEE%20%a0%20SoD%20%a0%20BG2%3AEE%20%a0%20EET%20%a0%20IWD1%20%a0%20IWD2%20%a0%20IWD%3AEE%20%a0%20PST%20%a0%20PST%3AEE-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 
 <!--
 Badges white space separator: %20%a0%20
