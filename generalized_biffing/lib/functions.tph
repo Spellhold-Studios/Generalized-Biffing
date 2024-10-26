@@ -95,3 +95,190 @@ BEGIN
     ACTION_TO_LOWER ~string~
   END
 END
+
+/**
+ * Returns a filename that consists of a prefix, an index number (0-padded to fill 8 characters),
+ * and the file extension of "source_file".
+ *
+ * INT_VAR index        A non-negative numeric index.
+ * STR_VAR source_file  Source filename of the associated file.
+ * STR_VAR prefix       An optional filename prefix.
+ * RET filename         Replacement filename consisting of index and source file extension.
+ */
+DEFINE_DIMORPHIC_FUNCTION get_replacement_filename
+INT_VAR
+  index = 0
+STR_VAR
+  source_file = ~~
+  prefix = ~_~
+RET
+  filename
+BEGIN
+  LAF EXT_OF_FILESPEC STR_VAR filespec = EVAL ~%source_file%~ RET ext END
+  OUTER_PATCH_SAVE dest_res ~00000000~ BEGIN
+    SET len = STRING_LENGTH ~%prefix%~
+    SET len = (len > 8) ? 8 : len
+    PATCH_IF (len > 0) BEGIN
+      WRITE_ASCIIE 0 ~%prefix%~ (len)
+    END
+
+    SET len = STRING_LENGTH ~%index%~
+    WRITE_ASCIIE (8 - len) ~%index%~ (len)
+  END
+  OUTER_SPRINT filename ~%dest_res%~
+  ACTION_IF (NOT ~%ext%~ STR_EQ ~~) BEGIN
+    OUTER_SPRINT filename ~%filename%.%ext%~
+  END
+END
+
+/**
+ * Converts character encoding of a specified text file.
+ *
+ * STR_VAR source_file      Filename of the source text file to convert.
+ * STR_VAR dest_file        Filename of the generated text file with converted content.
+ * STR_VAR source_encoding  Character encoding of the source file.
+ * STR_VAR dest_encoding    Character encoding of the target file.
+ * RET result               1 if successful, 0 on error.
+ */
+DEFINE_DIMORPHIC_FUNCTION convert_text_file
+STR_VAR
+  source_file = ~~
+  dest_file = ~~
+  source_encoding = ~utf-8~
+  dest_encoding = ~iso-8859-1~
+RET
+  result
+BEGIN
+  OUTER_SET result = 0
+  ACTION_IF (~%WEIDU_OS%~ STR_EQ ~win32~) BEGIN
+    OUTER_SPRINT iconv ~generalized_biffing/tra/iconv/iconv.exe~
+  END ELSE BEGIN
+    OUTER_SPRINT iconv ~iconv~
+  END
+
+  ACTION_IF (NOT ~%source_file%~ STR_EQ ~~ &&
+             NOT ~%source_file%~ STR_EQ ~%dest_file%~ &&
+             NOT ~%source_encoding%~ STR_EQ ~~ &&
+             NOT ~%dest_encoding%~ STR_EQ ~~) BEGIN
+    AT_NOW code ~%iconv% -s -f "%source_encoding%" -t "%dest_encoding%" "%source_file%" > "%dest_file%"~
+    ACTION_IF (code = 0) BEGIN
+      OUTER_SET result = 1
+    END
+  END
+END
+
+/**
+ * This function collects all matching filenames from the override folder and populates lookup tables
+ * to allow ANSI-preserving biffing operations.
+ *
+ * STR_VAR ext_pattern          Regular expression for filtering file extensions.
+ * STR_VAR file_pattern         Regular expression for filtering whole filenames.
+ * RET list_size                Returns the number of available filename entries in the "file_list" array.
+ * RET_ARRAY file_list          Returns an indexed array of filenames (without path) in UTF-8 encoding.
+ * RET_ARRAY src_to_repl_file   Returns a lookup table: "original filename (UTF8)" to "replacement filename"
+ * RET_ARRAY repl_to_dst_resref Returns a lookup table: "replacement resref" to "converted resref (ANSI)"
+ */
+DEFINE_ACTION_FUNCTION prepare_filelist
+STR_VAR
+  ext_pattern = ~.+~
+  file_pattern = ~.+~
+RET
+  list_size
+RET_ARRAY
+  file_list
+  src_to_repl_file
+  repl_to_dst_resref
+BEGIN
+<<<<<<<< .../inlined/generalized_biffing/blank
+>>>>>>>>
+  OUTER_SPRINT src_list ~generalized_biffing/prod/source_list.lst~
+  OUTER_SPRINT dst_list ~generalized_biffing/prod/dest_list.lst~
+  COPY ~.../inlined/generalized_biffing/blank~ ~%src_list%~
+  COPY ~.../inlined/generalized_biffing/blank~ ~%dst_list%~
+
+  // getting list of potential files to biff
+  OUTER_SET bash_for_files = 0
+  ACTION_BASH_FOR ~override~ ~^.+\.%ext_pattern%$~ BEGIN
+    LAF gb#is_blacklisted STR_VAR filename = EVAL ~%BASH_FOR_FILE%~ RET result END
+    ACTION_IF (NOT result) BEGIN
+      OUTER_SPRINT $bash_for_files(~%bash_for_files%~) ~%BASH_FOR_FILE%~
+      OUTER_SET bash_for_files += 1
+    END ELSE BEGIN
+      PRINT @100  // Skipping file: %BASH_FOR_FILE%
+    END
+  END
+
+  // storing filenames in external file for charset conversion
+  COPY ~%src_list%~ ~%src_list%~
+    SET ofs = 0
+    FOR (i = 0; i < bash_for_files; ++i) BEGIN
+      SPRINT file $bash_for_files(~%i%~)
+      SPRINT line ~%file%%LNL%~
+      SET len = STRING_LENGTH ~%line%~
+      PATCH_IF (ofs + len > BUFFER_LENGTH) BEGIN
+        INSERT_BYTES BUFFER_LENGTH 4096
+      END
+      WRITE_ASCIIE ofs ~%line%~ (len)
+      SET ofs += len
+    END
+    DELETE_BYTES ofs (BUFFER_LENGTH - ofs)
+  BUT_ONLY
+
+  // filenames: utf-8 to iso-8859-1 conversion
+  LAF convert_text_file
+    STR_VAR
+      source_file = EVAL ~%src_list%~
+      dest_file = EVAL ~%dst_list%~
+      source_encoding = ~utf-8~
+      dest_encoding = ~iso-8859-1~
+    RET result
+  END
+
+  // Operation may fail if original file list is already present in ANSI encoding (e.g. when using a x86-legacy WeiDU)
+  ACTION_IF (NOT result) BEGIN
+    WARN @103 // WARNING: Could not perform charset conversion on file list. Using original charset encoding.
+    COPY ~%src_list%~ ~%dst_list%~
+  END
+
+  // loading filenames to arrays
+  COPY ~%src_list%~ ~%src_list%~ READ_2DA_ENTRIES_NOW src_table 1 BUT_ONLY
+  COPY ~%dst_list%~ ~%dst_list%~ READ_2DA_ENTRIES_NOW dst_table 1 BUT_ONLY
+
+  // preparing replacement arrays
+  OUTER_SET index = 0
+  OUTER_SET list_size = 0
+  OUTER_SET is_linux = ~%WEIDU_OS%~ STR_EQ ~unix~
+  OUTER_FOR (i = 0; i < src_table; ++i) BEGIN
+    OUTER_SPRINT dest_file $dst_table(~%i%~ ~0~)
+    ACTION_IF (~%dest_file%~ STRING_MATCHES_REGEXP ~%file_pattern%~ == 0) BEGIN
+      OUTER_SPRINT source_file $src_table(~%i%~ ~0~)
+
+      // only filenames with non-ASCII characters are replaced
+      ACTION_IF (~%dest_file%~ STRING_CONTAINS_REGEXP "[^!-~]" == 0) BEGIN
+        // find next available replacement filename
+        OUTER_SET exists = 1
+        OUTER_WHILE (exists) BEGIN
+          LAF get_replacement_filename INT_VAR index STR_VAR source_file RET repl_file = filename END
+          OUTER_SET exists = FILE_EXISTS_IN_GAME ~%repl_file%~
+          ACTION_IF (exists) BEGIN
+            OUTER_SET index += 1
+          END
+        END
+
+        LAF RES_OF_FILESPEC STR_VAR filespec = EVAL ~%dest_file%~ RET dest_res = res END
+        LAF RES_OF_FILESPEC STR_VAR filespec = EVAL ~%repl_file%~ RET repl_res = res END
+
+        // performing lower-case/upper-case operation (depending on OS)
+        ACTION_IF (is_linux) THEN BEGIN ACTION_TO_LOWER ~dest_res~ END ELSE BEGIN ACTION_TO_UPPER ~dest_res~ END
+
+        OUTER_SPRINT $src_to_repl_file(~%source_file%~) ~%repl_file%~ // Source filename (UTF-8) -> replacement filename
+        OUTER_SPRINT $repl_to_dst_resref(~%repl_res%~) ~%dest_res%~   // Replacement resref -> destination resref (ANSI)
+
+        OUTER_SET index += 1
+      END
+
+      OUTER_SPRINT $file_list(~%list_size%~) ~%source_file%~
+      OUTER_SET list_size += 1
+    END
+  END
+END
