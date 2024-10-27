@@ -1,7 +1,7 @@
 # WeiDU Mod Packager by Argent77
 # See: https://github.com/InfinityTools/WeiduModPackager
 
-name: 'WeiDU Mod Packager (iemod; multi-platform: x86-legacy; use git release tag name as suffix)'
+name: 'WeiDU Mod Packager (iemod; multi-platform: amd64; use git release tag name as suffix)'
 
 on:
   release:
@@ -20,6 +20,6 @@ jobs:
     uses: InfinityTools/WeiduModPackagerLibrary/.github/workflows/WeiduModPackagerLibrary.yml@master
     with:
       type: ${{ matrix.type }}
-      architecture: x86-legacy
+      architecture: amd64
       suffix: ${{ github.event.release.tag_name }}
       naming: tp2
