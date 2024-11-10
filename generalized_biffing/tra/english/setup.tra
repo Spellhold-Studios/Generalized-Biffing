@@ -6,6 +6,6 @@
 @11 = ~Biff all files (recommended by the Big World Dudes)~
 
 @100 = ~Skipping file: %BASH_FOR_FILE%~
-@101 = ~Preparing files for biffing...~
-@102 = ~Biffing files...~
+@101 = ~Preparing files for biffing ...~
+@102 = ~Biffing files ...~
 @103 = ~WARNING: Could not perform charset conversion on file list. Using original charset encoding.~
