@@ -6,3 +6,6 @@
 @11 = ~Utworz archiwa dla wszystkich plikow (zalecane glownie dla megamodyfikacji)~
 
 @100 = ~Pomijanie pliku: %BASH_FOR_FILE%~
+@101 = ~Przygotowanie plikow do archiwizacji ...~
+@102 = ~Archiwizacja plikow ...~
+@103 = ~UWAGA: Konwersja znakow w nazwach plikow nie powiodla sie. Przywrocono pierwotne kodowanie znakow.~
