@@ -34,7 +34,7 @@ Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
 
 ## Introduction
 
-This WeiDU tool allows you to biff the contents of the override folder for improved performance; this means the files are converted into the BIFF file format and moved into the data folder. The game thereby loads much faster again and the performance is smoother. Generalized Biffing works natively also under macOS and Linux (if you use the correct executable), and is compatible with the common WeiDU stack uninstall operation. 
+This WeiDU tool allows you to biff the contents of the override folder for improved performance; this means the files are converted into the BIFF format and moved into the data folder. The game thereby loads much faster again and the performance is smoother. Generalized Biffing works also on macOS and Linux (if you use the correct executable) and is compatible with the common WeiDU stack uninstall operation.
 
 **Note:** User reports have indicated that Generalized Biffing is, in most cases, unnecessary for Enhanced Edition games.
 
