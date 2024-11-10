@@ -23,3 +23,4 @@ jobs:
       architecture: amd64
       suffix: ${{ github.event.release.tag_name }}
       naming: ini
+      lower_case: true
