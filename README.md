@@ -34,34 +34,12 @@ Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
 
 ## Introduction
 
-This WeiDU tool allows you to biff the content of the override folder for improved performance; that means the files are converted into the BIF file format and moved into the data folder. This works natively under OSX and Linux (if you use the correct executable) and is compatible with the common WeiDU stack un-install operation. The game thereby loads much faster again and the performance is running pretty smoothly without jerking.
+This WeiDU tool allows you to biff the contents of the override folder for improved performance; this means the files are converted into the BIFF file format and moved into the data folder. The game thereby loads much faster again and the performance is smoother. Generalized Biffing works natively also under macOS and Linux (if you use the correct executable), and is compatible with the common WeiDU stack uninstall operation. 
 
 <hr>
 
-:spiral_notepad: **Note:** Recent user reports have indicated that Generalized Biffing is unnecessary for Enhanced Edition games.
+:spiral_notepad: **Note:** User reports have indicated that Generalized Biffing is, in most cases, unnecessary for Enhanced Edition games.
 
-<hr>
-
-:warning: **Warning: As of WeiDU v247, some functions operating on the Latin-1 (8859-1) character set have been depracated and now use only US-ASCII characters. Biffing files with non-ASCII characters in their filenames may cause the game to crash.**
-
- It has been confirmed that the following mods may suffer from this issue if the affected files are biffed:
-
-- **Infinity Animations (all versions 5.x.x and below)**
-
-<br>
-
-If you also want to install any of the above mods, please follow these steps before installing Generalized Biffing at the end of your mod install order: 
-
-1. Remove all `setup-modname.exe` files from your game directory.
-2. Download [Generalized Biffing v2.7](https://github.com/Spellhold-Studios/Generalized-Biffing/releases/tag/v2.7) (warning: this version does not support EEex).
-3. Extract Generalized Biffing into the game directory, but don't install it.
-4. Download [WeiDU v246](https://github.com/WeiDUorg/weidu/releases/tag/v246.00).
-5. Rename `weidu.exe` from the v246 package to `setup-generalized_biffing.exe` and put it in the game directory overwriting the existing one.
-6. Install Generalized Biffing with WeiDU v246.
-
-<br>
-
-Alternatively, if you need EEex compatibility, install the latest Generalized Biffing with [WeiDU v249-x86-legacy](https://github.com/WeiDUorg/weidu/releases/tag/v249.00) (requires an OS with 32-bit application support.)
 <hr>
 
 *Please check the complete [Readme](https://spellhold-studios.github.io/readmes/generalized-biffing/generalized_biffing-readme-english.html) to learn more about this tool before installation.*
