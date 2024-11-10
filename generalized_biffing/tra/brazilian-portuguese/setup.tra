@@ -2,7 +2,10 @@
 
 @1 = ~Generalized Biffing~
 
-@10 = ~Converter pro formato BIFF so os arquivos WAV, TIS e BAM (recomendado pelo The Bigg e os outros Small World Dudes)~
-@11 = ~Converter todos os arquivos pro formato BIFF (recomendado pelos Big World Dudes)~
+@10 = ~Converter pro Biff só os arquivos WAV, TIS e BAM (recomendado pelo The Bigg e Small World Dudes)~
+@11 = ~Converter todos os arquivos pro Biff (recomendado pelos the Big World Dudes)~
 
-@100 = ~Ignorando arquivo: %BASH_FOR_FILE%~
+@100 = ~Ignorando o arquivo: %BASH_FOR_FILE%~
+@101 = ~Preparando os arquivos pra converter pro Biff...~
+@102 = ~Convertendo os arquivos pro Biff...~
+@103 = ~AVISO: Não pôde executar a conversão do conjunto de caracteres na lista de arquivos. Usando a codificação original do conjunto de caracteres.~
