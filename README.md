@@ -50,7 +50,7 @@ This WeiDU tool allows you to biff the contents of the override folder for impro
 
 **Contributors**  
 
-- Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition and EEex compatibility patches
+- Argent77 &nbsp;&ndash;&nbsp; Enhanced Edition, EEex, and non-ASCII compatibility patches
 - Gwendolyne &nbsp;&ndash;&nbsp; maintenance (versions 2.3&ndash;2.5)
 - AL|EN &nbsp;&ndash;&nbsp; maintenance (versions 2.6&ndash;2.7)
 - skellytz &nbsp;&ndash;&nbsp; maintenance (versions 2.8&ndash;2.9)
