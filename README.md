@@ -57,8 +57,8 @@ This WeiDU tool allows you to biff the contents of the override folder for impro
 
 **Translators**  
 
-- Felipe &nbsp;&ndash;&nbsp; Brazilian Portuguese
-- Isaya &nbsp;&ndash;&nbsp; French
+- **French**:&nbsp; Isaya
+- **Portuguese (Brazil)**:&nbsp; Felipe
 
 **Special thanks**  
 
