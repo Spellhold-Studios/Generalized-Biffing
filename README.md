@@ -1,5 +1,5 @@
 [![Release](https://img.shields.io/github/v/release/Spellhold-Studios/Generalized-Biffing?include_prereleases&color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases/latest)
-[![Published](https://img.shields.io/github/release-date/Spellhold-Studios/Generalized-Biffing?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases/latest)
+[![Published](https://img.shields.io/github/release-date-pre/Spellhold-Studios/Generalized-Biffing?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Generalized-Biffing/total?color=%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
 [![Language](https://img.shields.io/badge/language-en%20%a0%20fr%20%a0%20it%20%a0%20pl%20%a0%20pt--BR-%2392403a)](https://github.com/Spellhold-Studios/Generalized-Biffing/releases)
